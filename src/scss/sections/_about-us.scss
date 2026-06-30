@@ -1,0 +1,164 @@
+@use  "abstracts/variables" as *;
+#about {
+  background: $ink;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -200px;
+    top: -200px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(26, 122, 110, 0.15) 0%, transparent 70%);
+  }
+
+  .section-label {
+    color: $gold-light;
+
+    &::before { background: $gold; }
+  }
+
+  .section-title { color: $white; }
+  .section-desc  { color: rgba(255, 255, 255, 0.5); }
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-card-mock {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: $radius-lg;
+  padding: 28px;
+  width: 100%;
+  max-width: 380px;
+  backdrop-filter: blur(10px);
+}
+
+.mock-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.mock-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, $teal, $teal-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: $white;
+  font-size: 1rem;
+}
+
+.mock-title {
+  color: $white;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.mock-sub {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.78rem;
+  margin-top: 2px;
+}
+
+.mock-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mock-stat {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.mock-stat-n {
+  color: $gold-light;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.mock-stat-l {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.65rem;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+.mock-offers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mock-offer {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mock-offer-name {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+}
+
+.mock-offer-tag {
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: rgba(26, 122, 110, 0.3);
+  color: $teal-light;
+}
+
+.floating-chip {
+  position: absolute;
+  background: $white;
+  border-radius: 12px;
+  padding: 10px 16px;
+  box-shadow: $shadow-lg;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $ink;
+}
+
+.chip-1 { top: -20px; right: -10px; }
+.chip-2 { bottom: -10px; left: -10px; }
+
+.chip-icon { font-size: 1.1rem; }
+
+@media (max-width: 900px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+  }
+}

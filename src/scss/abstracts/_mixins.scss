@@ -1,0 +1,168 @@
+// _mixins.scss
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:meta';
+@use 'variables' as *;
+
+@mixin breakpoint-up($bp) {
+  @if map.has-key($breakpoints, $bp) {
+    @media (min-width: map.get($breakpoints, $bp)) { @content; }
+  } @else {
+    @warn 'Unknown breakpoint: #{$bp}';
+  }
+}
+
+@mixin breakpoint-down($bp) {
+  @if map.has-key($breakpoints, $bp) {
+    @media (max-width: (map.get($breakpoints, $bp) - 1px)) { @content; }
+  } @else {
+    @warn 'Unknown breakpoint: #{$bp}';
+  }
+}
+
+@mixin breakpoint-between($lower, $upper) {
+  @if map.has-key($breakpoints, $lower) and map.has-key($breakpoints, $upper) {
+    @media (min-width: map.get($breakpoints, $lower)) and (max-width: (map.get($breakpoints, $upper) - 1px)) {
+      @content;
+    }
+  } @else {
+    @warn 'Unknown breakpoint: #{$lower} or #{$upper}';
+  }
+}
+
+@mixin breakpoint-only($bp) {
+  $keys: map.keys($breakpoints);
+  $index: index($keys, $bp);
+
+  @if $index == null {
+    @warn 'Unknown breakpoint: #{$bp}';
+  } @else if $index == length($keys) {
+    @media (min-width: map.get($breakpoints, $bp)) { @content; }
+  } @else {
+    $next-bp: nth($keys, $index + 1);
+    @media (min-width: map.get($breakpoints, $bp)) and (max-width: (map.get($breakpoints, $next-bp) - 1px)) {
+      @content;
+    }
+  }
+}
+
+
+// ============================================================
+// rem() — Convert px to rem
+// ============================================================
+// Base font size (matches your <html> / :root font-size).
+// Override this variable before importing this file if needed.
+$base-font-size: 16 !default;
+
+/// Convert a unitless px value (or list of values) to rem.
+///
+/// Usage:
+///   font-size: rem(24);          → 1.5rem
+///   padding: rem(16 32);         → 1rem 2rem
+///   margin: rem(8 16 24 32);     → 0.5rem 1rem 1.5rem 2rem
+///
+/// @param  {Number | List} $values  One or more unitless pixel values
+/// @param  {Number}        $base    Base font size (default: $base-font-size)
+/// @return {List}                   Equivalent rem values
+@function rem($values, $base: $base-font-size) {
+  $rem-values: ();
+
+  @each $value in $values {
+    @if $value == 0 {
+      // 0 needs no unit
+      $rem-values: list.append($rem-values, 0);
+    } @else if meta.type-of($value) == number and not math.is-unitless($value) {
+      // Already has a unit (e.g. 1em, 100%) — pass through unchanged
+      $rem-values: list.append($rem-values, $value);
+    } @else {
+      $rem-values: list.append($rem-values, math.div($value, $base) * 1rem);
+    }
+  }
+
+  // Return a single value unwrapped, or a space-separated list
+  @if list.length($rem-values) == 1 {
+    @return list.nth($rem-values, 1);
+  }
+
+  @return $rem-values;
+}
+
+
+// ============================================================
+// rem() mixin — shorthand for setting a single property
+// ============================================================
+/// Apply any CSS property with automatic px → rem conversion.
+///
+/// Usage:
+///   @include rem(font-size, 18);
+///   @include rem(padding, 12 24);
+///   @include rem(margin, 8 16 8 0);
+///
+/// @param {String}         $property  Any CSS property
+/// @param {Number | List}  $values    One or more unitless pixel values
+@mixin rem($property, $values) {
+  #{$property}: rem($values);
+}
+
+
+// ============================================================
+// fluid-rem() — Fluid typography / spacing helper
+// ============================================================
+/// Generates a clamp() value that scales linearly between two
+/// pixel sizes across a viewport range, expressed in rem.
+///
+/// Usage:
+///   font-size: fluid-rem(16, 24, 375, 1280);
+///   → clamp(1rem, …vw calc, 1.5rem)
+///
+/// @param  {Number} $min-px       Minimum size in px
+/// @param  {Number} $max-px       Maximum size in px
+/// @param  {Number} $min-vw       Viewport width where min applies (px)
+/// @param  {Number} $max-vw       Viewport width where max applies (px)
+/// @param  {Number} $base         Base font size (default: $base-font-size)
+/// @return {String}               clamp() expression in rem / vw
+@function fluid-rem($min-px, $max-px, $min-vw: 375, $max-vw: 1280, $base: $base-font-size) {
+  $min-rem:    calc($min-px / $base) * 1rem;
+  $max-rem:    calc($max-px / $base) * 1rem;
+  $slope:      calc(($max-px - $min-px) / ($max-vw - $min-vw));
+  $intercept:  calc($min-px - $slope * $min-vw);
+
+  // preferred value: slope * 100vw + intercept (in rem)
+  $preferred: #{$slope * 100}vw + #{calc($intercept / $base)}rem;
+
+  @return clamp(#{$min-rem}, #{$preferred}, #{$max-rem});
+}
+
+
+// ============================================================
+// Demo / reference — delete before production
+// ============================================================
+// .example {
+//   // Function form
+//   font-size:   rem(18);            // → 1.125rem
+//   line-height: rem(28);            // → 1.75rem
+//   padding:     rem(12 24);         // → 0.75rem 1.5rem
+//   margin:      rem(8 16 24 0);     // → 0.5rem 1rem 1.5rem 0
+//
+//   // Mixin form (equivalent)
+//   @include rem(border-radius, 6);  // → border-radius: 0.375rem
+//
+//   // Fluid rem (clamp-based)
+//   font-size: fluid-rem(16, 24, 375, 1280);
+// }
+
+// ─── Flex helpers ─────────────────────────────────────────────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// ─── Truncate text ────────────────────────────────────────────────────────────
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+

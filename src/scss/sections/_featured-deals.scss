@@ -1,0 +1,276 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+#featured-deals {
+  background: linear-gradient(135deg, rgba($color-primary, 0.05) 0%, rgba($color-secondary, 0.05) 100%);
+  padding: 80px 0;
+
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.featured-deals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+
+  @include breakpoint-down(md) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  @include breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.deal-card {
+  background: $white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  animation: slideUp 0.6s ease-out backwards;
+
+  &:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.deal-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: $surface;
+
+  .deal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .deal-card:hover & .deal-image {
+    transform: scale(1.05);
+  }
+}
+
+.deal-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+
+  &.badge-hot {
+    background: #ff4757;
+    color: white;
+  }
+
+  &.badge-trending {
+    background: $color-primary;
+    color: white;
+  }
+
+  &.badge-sale {
+    background: #ffa502;
+    color: white;
+  }
+
+  &.badge-featured {
+    background: $gold;
+    color: $color-dark;
+  }
+
+  &.badge-new {
+    background: #17c0eb;
+    color: white;
+  }
+
+  &.badge-default {
+    background: $ink-muted;
+    color: white;
+  }
+}
+
+.deal-bookmark {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+
+  svg {
+    width: 18px;
+    height: 18px;
+    color: $ink-muted;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    background: $color-primary;
+    transform: scale(1.1);
+
+    svg {
+      color: white;
+    }
+  }
+
+  &.bookmarked {
+    background: $color-primary;
+
+    svg {
+      color: white;
+      fill: $color-primary;
+    }
+  }
+}
+
+.deal-trending {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 4px 8px;
+  background: rgba($color-primary, 0.9);
+  color: white;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+.deal-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.deal-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: $ink;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.deal-provider {
+  margin: 0;
+  font-size: 13px;
+  color: $ink-soft;
+  font-weight: 500;
+}
+
+.deal-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: $ink-muted;
+
+  svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+}
+
+.deal-reviews {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+
+  .deal-stars {
+    color: $gold;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .deal-rating {
+    font-weight: 600;
+    color: $ink;
+  }
+
+  .deal-review-count {
+    color: $ink-muted;
+  }
+}
+
+.deal-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+
+  .btn-view-details {
+    flex: 1;
+  }
+
+  .btn-share {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid $surface;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: $ink-soft;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      border-color: $color-primary;
+      background: rgba($color-primary, 0.05);
+
+      svg {
+        color: $color-primary;
+      }
+    }
+  }
+}

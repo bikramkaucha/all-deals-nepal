@@ -1,0 +1,129 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+  min-height: 100vh;
+  background: $color-dark;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 72px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 50%, rgba(26, 122, 110, 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201, 168, 76, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 70% at 90% 10%, rgba(26, 122, 110, 0.08) 0%, transparent 60%);
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-inner {
+  padding: 80px 0 0;
+  position: relative;
+  z-index: 2;
+  text-align:center;
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    color: $gold-light;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  
+    &::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: $gold;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+  }
+  .hero-title {
+    font-size: clamp(2.4rem, 4.5vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: $white;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  
+    em {
+      font-style: normal;
+      color: $color-primary;
+      position: relative;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, $color-primary, transparent);
+        border-radius: 2px;
+      }
+    }
+  }
+  
+  .hero-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: rem(18);
+    max-width: rem(768);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    animation: fadeUp 0.6s 0.2s ease both;
+    margin: 0 auto rem(24);
+  }
+  
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+    animation: fadeUp 0.6s 0.3s ease both;
+    @include breakpoint-down(lg) {
+      gap: 20px;
+    }
+    .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: $white;
+      line-height: 1;
+    
+      span { color: $color-primary; }
+    }
+    
+    .stat-label {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+  }
+  
+}
+

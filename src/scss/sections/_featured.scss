@@ -1,0 +1,151 @@
+@use 'abstracts/variables' as *; 
+
+#featured {
+  background: $white;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.company-card {
+  background: $surface;
+  border: 1.5px solid $border;
+  border-radius: $radius-lg;
+  padding: 24px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, $teal, $gold);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: $shadow-lg;
+    transform: translateY(-4px);
+
+    &::before { opacity: 1; }
+  }
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.company-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: $white;
+  flex-shrink: 0;
+}
+
+// Logo color variants
+.logo-a { background: linear-gradient(135deg, #1a7a6e, #2aab9a); }
+.logo-b { background: linear-gradient(135deg, #c9a84c, #e8c97a); color: $ink; }
+.logo-c { background: linear-gradient(135deg, #e85d3a, #f08060); }
+.logo-d { background: linear-gradient(135deg, #5a6abf, #7b8dd4); }
+.logo-e { background: linear-gradient(135deg, #2c3e50, #465670); }
+.logo-f { background: linear-gradient(135deg, #8e44ad, #a55cc7); }
+
+.card-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge-featured {
+  background: rgba(201, 168, 76, 0.15);
+  color: #9a7a20;
+  border: 1px solid rgba(201, 168, 76, 0.4);
+}
+
+.badge-new {
+  background: $teal-pale;
+  color: $teal;
+  border: 1px solid rgba(26, 122, 110, 0.2);
+}
+
+.company-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: $ink;
+  margin-bottom: 4px;
+}
+
+.company-category {
+  font-size: 0.8rem;
+  color: $ink-muted;
+  margin-bottom: 12px;
+}
+
+.company-desc {
+  font-size: 0.85rem;
+  color: $ink-soft;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.card-meta {
+  display: flex;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid $border;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: $ink-muted;
+
+  svg {
+    width: 13px;
+    height: 13px;
+    color: $teal;
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stars {
+  color: $gold;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .companies-grid {
+    grid-template-columns: 1fr;
+  }
+}

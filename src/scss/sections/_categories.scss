@@ -1,0 +1,100 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+#categories {
+  background: $surface;
+}
+
+.categories-wrap {
+  display: block;
+  position: relative;
+  padding: 16px 0 8px;
+}
+
+.categories-swiper {
+  .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+    @include rem(padding, 30 0);
+  }
+
+  .swiper-slide {
+    width: auto;
+  }
+}
+.swiper-button-prev,
+.swiper-button-next{
+  &:after{
+    color:$color-primary;
+    font-size: rem(28) !important;
+  }
+}
+
+.cat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  padding: 22px 18px;
+  border-radius: 26px;
+  background: $white;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+
+  &:hover {
+    transform: translateY(-6px);
+
+    .cat-circle {
+      box-shadow: 0 12px 32px rgba(245, 177, 202, 0.2);
+
+      &::after { border-color:$color-secondary; }
+    }
+  }
+}
+
+.cat-circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
+}
+
+.cat-icon { font-size: 2rem; }
+
+// Category color variants
+.cat-c1 { background: linear-gradient(135deg, #e8f7f5, #c8eee9); }
+.cat-c2 { background: linear-gradient(135deg, #fdf6e3, #f5e8c0); }
+.cat-c3 { background: linear-gradient(135deg, #fdeae5, #f8cfc5); }
+.cat-c4 { background: linear-gradient(135deg, #edf0fb, #d0d8f5); }
+.cat-c5 { background: linear-gradient(135deg, #f0fdf4, #c6f0d4); }
+.cat-c6 { background: linear-gradient(135deg, #fdf4ff, #f0d6f8); }
+.cat-c7 { background: linear-gradient(135deg, #fff7ed, #fde3c0); }
+.cat-c8 { background: linear-gradient(135deg, #f0f9ff, #c7e8f7); }
+
+.cat-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: $ink;
+  text-align: center;
+}
+
+.cat-count {
+  font-size: 0.72rem;
+  color: $ink-muted;
+}

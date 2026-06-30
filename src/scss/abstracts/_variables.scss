@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// ─── Base Font Size ───────────────────────────────────────────────────────────
+$base-font-size: 16; // Used for rem() function conversions
+
+// ─── Colors ───────────────────────────────────────────────────────────────────
+$color-primary:   #E8185A;
+$color-secondary: #ef7da6;
+$color-dark:      #4B1528;
+$color-light:     #FBEAF0;
+// ─── VARIABLES ────────────────────────────────────────────────────────────────
+
+// Colors
+$ink:         #0d0f14;
+$ink-soft:    #3a3d4a;
+$ink-muted:   #7c8090;
+$surface:     #f5f4f0;
+$white:       #ffffff;
+$gold:        #c9a84c;
+$gold-light:  #e8c97a;
+$gold-pale:   #fdf6e3;
+$teal:        #1a7a6e;
+$teal-light:  #2aab9a;
+$teal-pale:   #e8f7f5;
+$accent:      #e85d3a;
+$border:      #e2e0d8;
+$border-dark: #cccac1;
+
+// Radii
+$radius:    12px;
+$radius-lg: 18px;
+
+// Shadows
+$shadow-sm: 0 2px 8px rgba(13, 15, 20, 0.06);
+$shadow-md: 0 6px 24px rgba(13, 15, 20, 0.09);
+$shadow-lg: 0 16px 48px rgba(13, 15, 20, 0.13);
+
+// Layout
+$sidebar-w: 268px;
+$header-h:  66px;
+
+// ─── Typography ───────────────────────────────────────────────────────────────
+$primary-font:  'Montserrat', sans-serif;
+
+$font-size-base: 1rem;       // 16px
+$line-height:    1.6;
+
+// ─── Spacing ──────────────────────────────────────────────────────────────────
+$space-xs:  0.25rem;
+$space-sm:  0.5rem;
+$space-md:  1rem;
+$space-lg:  2rem;
+$space-xl:  4rem;
+
+// ─── Breakpoints ──────────────────────────────────────────────────────────────
+$breakpoints: (
+  'sm':  576px,
+  'md':  768px,
+  'lg':  992px,
+  'xl':  1200px,
+  'xxl': 1400px,
+);
+
+// ─── Transitions ──────────────────────────────────────────────────────────────
+$transition-fast:   150ms ease;
+$transition-normal: 250ms ease;

@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as *;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.text-center  { text-align: center; }
+.text-muted   { color: $color-secondary; }
+.mt-auto      { margin-top: auto; }

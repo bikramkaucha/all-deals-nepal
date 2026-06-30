@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Deals Nepal</title>
+<link rel="preload" href="./critical.min.css" as="style" onload="this.rel='stylesheet'">
+<link rel="stylesheet" href="./main.min.css" >
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+</head>
+<body>
+
+<!-- ═══ HEADER ════════════════════════════════════════════ -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="./src/image/logo.png" alt="All Deals Nepal Logo" >
+    </a>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="#about">About Us</a>
+      <div class="nav-item">
+        <a href="./listing.html" class="nav-category">Business</a>
+        <div class="nav-dropdown" aria-label="Business categories">
+          <div class="dropdown-grid">
+            <div class="dropdown-column">
+              <h4>Popular</h4>
+              <a href="./listing.html">Technology &amp; IT</a>
+              <a href="./listing.html">Finance &amp; Banking</a>
+              <a href="./listing.html">Healthcare</a>
+              <a href="./listing.html">Education</a>
+            </div>
+            <div class="dropdown-column">
+              <h4>Retail</h4>
+              <a href="./listing.html">Retail &amp; Shopping</a>
+              <a href="./listing.html">Food &amp; Restaurant</a>
+              <a href="./listing.html">Travel &amp; Tourism</a>
+              <a href="./listing.html">Construction</a>
+            </div>
+            <div class="dropdown-column">
+              <h4>Services</h4>
+              <a href="./listing.html">Real Estate</a>
+              <a href="./listing.html">Logistics</a>
+              <a href="./listing.html">Marketing</a>
+              <a href="./listing.html">Legal Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#newsletter">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="#" class="btn btn--outline">Sign In</a>
+      <a href="#why" class="btn btn--primary">Register Company</a>
+    </div>
+
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-drawer">
+    <nav class="mobile-nav">
+      <a href="#featured">Home</a>
+      <a href="#about">About Us</a>
+      <div class="mobile-nav-item">
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false">
+          <span>Business</span>
+          <span class="chevron">▾</span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="./listing.html">Technology &amp; IT</a>
+          <a href="./listing.html">Finance &amp; Banking</a>
+          <a href="./listing.html">Healthcare</a>
+          <a href="./listing.html">Retail &amp; Shopping</a>
+          <a href="./listing.html">Food &amp; Restaurant</a>
+        </div>
+      </div>
+      <a href="#newsletter">Contact</a>
+    </nav>
+    <div class="mobile-cta">
+      <a href="#" class="btn-login">Sign In</a>
+      <a href="#why" class="btn-register">Register Company</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HERO / BANNER ════════════════════════════════════= -->
+<section class="section hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Nepal's #1 Business Directory</div>
+        <h1 class="hero-title">
+          Discover &amp; Connect with<br><em>Top Companies</em> Across Nepal
+        </h1>
+        <p class="hero-desc">
+          Browse thousands of verified businesses, find local services, and put your company in front of the right audience. Trusted by businesses nationwide.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">12<span>K+</span></div>
+            <div class="stat-label">Companies</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">48<span>+</span></div>
+            <div class="stat-label">Categories</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">180<span>K</span></div>
+            <div class="stat-label">Monthly Views</div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Search Box -->
+      <div class="search-box">
+        <p class="search-title">Find the Right Business</p>
+        <div class="search-grid">
+          <div class="search-field">
+            <label>Search Business</label>
+            <input type="text" placeholder="e.g. IT Company, Restaurant…">
+          </div>
+          <div class="search-field">
+            <label>Location</label>
+            <select>
+              <option>All of Nepal</option>
+              <option>Kathmandu</option>
+              <option>Pokhara</option>
+              <option>Lalitpur</option>
+              <option>Bhaktapur</option>
+              <option>Biratnagar</option>
+              <option>Birgunj</option>
+            </select>
+          </div>
+          <div class="search-field full">
+            <label>Category</label>
+            <select>
+              <option>All Categories</option>
+              <option>Technology & IT</option>
+              <option>Finance & Banking</option>
+              <option>Healthcare</option>
+              <option>Education</option>
+              <option>Retail & Shopping</option>
+              <option>Construction</option>
+              <option>Food & Restaurant</option>
+              <option>Travel & Tourism</option>
+            </select>
+          </div>
+          <button class="btn btn--primary btn-search" type="submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            Search Companies
+          </button>
+        </div>
+        <div class="popular-searches">
+          <span class="popular-label">Popular:</span>
+          <span class="popular-tag">IT & Software</span>
+          <span class="popular-tag">Restaurant</span>
+          <span class="popular-tag">Construction</span>
+          <span class="popular-tag">Healthcare</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEATURED DEALS ════════════════════════════════════ -->
+<section id="featured-deals">
+  <div class="container">
+    <div class="section-head reveal" style="justify-content:center; text-align:center; flex-direction:column; align-items:center; gap:0;">
+      <span class="section-label">Limited Time Offers</span>
+      <h2 class="section-title">Featured <em>Deals</em></h2>
+      <p class="section-desc" style="margin:0 auto;">Check out our best exclusive deals and discounts from trusted businesses.</p>
+    </div>
+    <div id="featured-deals-grid" class="featured-deals-grid reveal">
+      <!-- Cards will be generated by JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CATEGORIES ════════════════════════════════════════ -->
+<section id="categories">
+  <div class="container">
+    <div class="section-head reveal" style="justify-content:center; text-align:center; flex-direction:column; align-items:center; gap:0;">
+      <span class="section-label">Browse By</span>
+      <h2 class="section-title">Explore <em>Categories</em></h2>
+      <p class="section-desc" style="margin:0 auto;">Find exactly what you're looking for across our wide range of business categories.</p>
+    </div>
+    <div class="categories-wrap reveal swiper categories-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="cat-card">
+            <div class="cat-circle cat-c1"><span class="cat-icon">💻</span></div>
+            <div class="cat-name">Technology</div>
+            <div class="cat-count">1,240 companies</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="cat-card">
+            <div class="cat-circle cat-c2"><span class="cat-icon">💰</span></div>
+            <div class="cat-name">Finance</div>
+            <div class="cat-count">830 companies</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="cat-card">
+            <div class="cat-circle cat-c3"><span class="cat-icon">🏥</span></div>
+            <div class="cat-name">Healthcare</div>
+            <div class="cat-count">620 companies</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="cat-card">
+            <div class="cat-circle cat-c4"><span class="cat-icon">🎓</span></div>
+            <div class="cat-name">Education</div>
+            <div class="cat-count">975 companies</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="cat-card">
+            <div class="cat-circle cat-c5"><span class="cat-icon">🛒</span></div>
+            <div class="cat-name">Retail</div>
+            <div class="cat-count">2,100 companies</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="cat-card">
+            <div class="cat-circle cat-c6"><span class="cat-icon">🏗️</span></div>
+            <div class="cat-name">Construction</div>
+            <div class="cat-count">740 companies</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="cat-card">
+            <div class="cat-circle cat-c7"><span class="cat-icon">🍽️</span></div>
+            <div class="cat-name">Food & Dining</div>
+            <div class="cat-count">1,880 companies</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="cat-card">
+            <div class="cat-circle cat-c8"><span class="cat-icon">✈️</span></div>
+            <div class="cat-name">Travel</div>
+            <div class="cat-count">560 companies</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEATURED COMPANIES ═══════════════════════════════ -->
+<section id="featured">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="section-label">Top Picks</span>
+        <h2 class="section-title">Featured <em>Companies</em></h2>
+        <p class="section-desc">Verified and highly rated businesses that set the standard in their industries.</p>
+      </div>
+      <a href="#" class="link-all">View All Companies →</a>
+    </div>
+
+    <div class="companies-grid">
+
+      <div class="company-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-a">TS</div>
+          <span class="card-badge badge-featured">⭐ Featured</span>
+        </div>
+        <div class="company-name">TechSphere Solutions</div>
+        <div class="company-category">Technology & IT Services</div>
+        <p class="company-desc">Custom software development, cloud solutions, and digital transformation services for enterprises.</p>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kathmandu
+          </div>
+          <div class="meta-item rating">
+            <span class="stars">★★★★★</span> 4.9
+          </div>
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Est. 2014
+          </div>
+        </div>
+      </div>
+
+      <div class="company-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-b">GF</div>
+          <span class="card-badge badge-featured">⭐ Featured</span>
+        </div>
+        <div class="company-name">GoldFinance Group</div>
+        <div class="company-category">Finance & Investment</div>
+        <p class="company-desc">Comprehensive financial services including loans, investment consulting, and wealth management.</p>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Lalitpur
+          </div>
+          <div class="meta-item rating">
+            <span class="stars">★★★★★</span> 4.8
+          </div>
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Est. 2008
+          </div>
+        </div>
+      </div>
+
+      <div class="company-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-c">HC</div>
+          <span class="card-badge badge-new">✦ New</span>
+        </div>
+        <div class="company-name">HealthCare Plus</div>
+        <div class="company-category">Healthcare & Medical</div>
+        <p class="company-desc">Modern medical facilities with specialist doctors, diagnostics, and telemedicine services.</p>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Pokhara
+          </div>
+          <div class="meta-item rating">
+            <span class="stars">★★★★☆</span> 4.6
+          </div>
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Est. 2021
+          </div>
+        </div>
+      </div>
+
+      <div class="company-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-d">EA</div>
+          <span class="card-badge badge-featured">⭐ Featured</span>
+        </div>
+        <div class="company-name">EduAcademy Nepal</div>
+        <div class="company-category">Education & Training</div>
+        <p class="company-desc">Professional certification courses, skill development programs, and vocational training centres.</p>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kathmandu
+          </div>
+          <div class="meta-item rating">
+            <span class="stars">★★★★★</span> 4.9
+          </div>
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Est. 2011
+          </div>
+        </div>
+      </div>
+
+      <div class="company-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-e">BM</div>
+          <span class="card-badge badge-new">✦ New</span>
+        </div>
+        <div class="company-name">BuildMasters Co.</div>
+        <div class="company-category">Construction & Real Estate</div>
+        <p class="company-desc">Residential and commercial construction, interior design, and property development firm.</p>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bhaktapur
+          </div>
+          <div class="meta-item rating">
+            <span class="stars">★★★★☆</span> 4.5
+          </div>
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Est. 2019
+          </div>
+        </div>
+      </div>
+
+      <div class="company-card reveal">
+        <div class="card-top">
+          <div class="company-logo logo-f">TT</div>
+          <span class="card-badge badge-featured">⭐ Featured</span>
+        </div>
+        <div class="company-name">TrekTours Nepal</div>
+        <div class="company-category">Travel & Tourism</div>
+        <p class="company-desc">Award-winning trekking, adventure tours, and customised travel packages across the Himalayas.</p>
+        <div class="card-meta">
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Pokhara
+          </div>
+          <div class="meta-item rating">
+            <span class="stars">★★★★★</span> 5.0
+          </div>
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Est. 2007
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══ ABOUT US ═══════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-inner">
+      <div class="reveal">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title" style="color:var(--white);">Nepal's Most <em style="color:var(--gold-light)">Trusted</em> Business Platform</h2>
+        <p class="section-desc" style="color:rgba(255,255,255,0.5); margin-bottom: 32px;">
+          BizHub was founded with a single mission: to bridge the gap between businesses and customers across Nepal. We believe every company, big or small, deserves a powerful digital presence.
+        </p>
+        <p class="section-desc" style="color:rgba(255,255,255,0.5); margin-bottom: 32px;">
+          Since 2018, we've helped over 12,000 companies build their profiles, manage offers, and connect with thousands of potential customers daily. Our platform is built for the Nepali business ecosystem.
+        </p>
+        <div style="display:flex; gap:32px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:10px; color:rgba(255,255,255,0.6); font-size:0.85rem;">
+            <span style="color:var(--teal-light); font-size:1.1rem;">✓</span> Verified Listings
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; color:rgba(255,255,255,0.6); font-size:0.85rem;">
+            <span style="color:var(--teal-light); font-size:1.1rem;">✓</span> Nationwide Coverage
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; color:rgba(255,255,255,0.6); font-size:0.85rem;">
+            <span style="color:var(--teal-light); font-size:1.1rem;">✓</span> Free to Browse
+          </div>
+        </div>
+      </div>
+
+      <div class="about-visual reveal">
+        <div class="about-card-mock">
+          <div class="mock-header">
+            <div class="mock-logo">TS</div>
+            <div>
+              <div class="mock-title">TechSphere Solutions</div>
+              <div class="mock-sub">Company Dashboard</div>
+            </div>
+          </div>
+          <div class="mock-stats">
+            <div class="mock-stat">
+              <div class="mock-stat-n">4.2K</div>
+              <div class="mock-stat-l">Views</div>
+            </div>
+            <div class="mock-stat">
+              <div class="mock-stat-n">318</div>
+              <div class="mock-stat-l">Leads</div>
+            </div>
+            <div class="mock-stat">
+              <div class="mock-stat-n">12</div>
+              <div class="mock-stat-l">Offers</div>
+            </div>
+          </div>
+          <div class="mock-offers">
+            <div class="mock-offer">
+              <span class="mock-offer-name">🎯 Summer Web Dev Deal</span>
+              <span class="mock-offer-tag">Active</span>
+            </div>
+            <div class="mock-offer">
+              <span class="mock-offer-name">☁️ Cloud Migration Package</span>
+              <span class="mock-offer-tag">Active</span>
+            </div>
+            <div class="mock-offer">
+              <span class="mock-offer-name">📱 Mobile App Bundle</span>
+              <span class="mock-offer-tag">Active</span>
+            </div>
+          </div>
+        </div>
+        <div class="floating-chip chip-1">
+          <span class="chip-icon">📈</span> +28% views this month
+        </div>
+        <div class="floating-chip chip-2">
+          <span class="chip-icon">✅</span> Verified Business
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY REGISTER ══════════════════════════════════════ -->
+<section id="why">
+  <div class="container">
+    <div class="why-grid">
+      <!-- Registration Panel -->
+      <div class="register-panel reveal">
+        <h3 class="reg-title">Register Your Company Today</h3>
+        <p class="reg-desc">Join over 12,000 businesses already listed on BizHub and start attracting new customers.</p>
+        <div class="reg-form">
+          <input type="text" placeholder="Company Name">
+          <input type="email" placeholder="Business Email">
+          <input type="text" placeholder="Phone Number">
+          <select style="background:rgba(255,255,255,0.07); border:1.5px solid rgba(255,255,255,0.12); border-radius:10px; padding:12px 16px; color:rgba(255,255,255,0.7); font-family:'DM Sans',sans-serif; font-size:0.9rem; outline:none;">
+            <option>Select Business Category</option>
+            <option>Technology & IT</option>
+            <option>Finance</option>
+            <option>Healthcare</option>
+            <option>Education</option>
+            <option>Other</option>
+          </select>
+          <button class="btn-reg-submit">Create Free Company Profile →</button>
+        </div>
+        <p class="reg-terms">By registering you agree to our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a></p>
+      </div>
+
+      <!-- Benefits Panel -->
+      <div class="benefits-panel reveal">
+        <span class="section-label">Why BizHub?</span>
+        <h2 class="section-title">Benefits of <em>Listing</em> With Us</h2>
+        <p class="section-desc">Everything your business needs to grow its digital presence and reach more customers.</p>
+
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">🔍</div>
+            <div>
+              <div class="benefit-title">Boost Your Visibility</div>
+              <div class="benefit-desc">Appear in front of thousands of customers actively searching for your services every day.</div>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">🎯</div>
+            <div>
+              <div class="benefit-title">Post Offers & Deals</div>
+              <div class="benefit-desc">Create and manage special offers, discounts, and promotions directly from your dashboard.</div>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📊</div>
+            <div>
+              <div class="benefit-title">Detailed Analytics</div>
+              <div class="benefit-desc">Track profile views, customer enquiries, and offer performance with real-time insights.</div>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">✅</div>
+            <div>
+              <div class="benefit-title">Verified Badge</div>
+              <div class="benefit-desc">Build trust with customers by earning a verification badge on your company profile.</div>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">📱</div>
+            <div>
+              <div class="benefit-title">Mobile-Friendly Profile</div>
+              <div class="benefit-desc">Your company profile looks great on all devices, making it easy for customers to find you.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER ════════════════════════════════════════ -->
+<section id="newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-text reveal">
+        <span class="section-label">Stay Updated</span>
+        <h2 class="section-title">Get Business News &amp; <em style="color:var(--gold-light)">Exclusive Deals</em></h2>
+        <p class="section-desc">Subscribe to our newsletter and be the first to know about new company listings, featured deals, and business updates across Nepal.</p>
+        <div class="newsletter-perks">
+          <span class="perk">Weekly digest</span>
+          <span class="perk">New listings alert</span>
+          <span class="perk">Exclusive offers</span>
+          <span class="perk">No spam, ever</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="newsletter-form">
+          <div class="nf-row">
+            <input class="nf-input" type="text" placeholder="Your Full Name">
+          </div>
+          <div class="nf-row">
+            <input class="nf-input" type="email" placeholder="Your Email Address">
+            <button class="nf-btn">Subscribe</button>
+          </div>
+          <p class="nf-note">📩 Join 25,000+ subscribers. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-mark"></div>
+          <span class="logo-name" style="color:var(--white);">Biz<span>Hub</span></span>
+        </a>
+        <p>Nepal's leading business directory connecting customers with verified companies across all industries and locations nationwide.</p>
+        <div class="footer-address">
+          <strong>BizHub Nepal Pvt. Ltd.</strong>
+          New Baneshwor, Kathmandu 44600<br>
+          Bagmati Province, Nepal<br>
+          📞 +977-1-4XXXXXX<br>
+          ✉️ hello@bizhub.com.np
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Technology & IT</a></li>
+          <li><a href="#">Finance & Banking</a></li>
+          <li><a href="#">Healthcare</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Construction</a></li>
+          <li><a href="#">Food & Dining</a></li>
+          <li><a href="#">Travel & Tourism</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Pricing Plans</a></li>
+          <li><a href="#">Success Stories</a></li>
+          <li><a href="#">Blog & News</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Register Company</a></li>
+          <li><a href="#">Manage Profile</a></li>
+          <li><a href="#">Post an Offer</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Report Issue</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 <strong>BizHub Nepal Pvt. Ltd.</strong> All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="./dist/js/main.min.js" type="text/javascript"></script>
+</body>
+</html>
