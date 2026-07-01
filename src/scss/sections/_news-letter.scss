@@ -1,7 +1,7 @@
 @use 'abstracts/variables' as *;
 
 #newsletter {
-  background: linear-gradient(135deg, $teal 0%, #156358 100%);
+  background: linear-gradient(135deg, $color-dark 0%, $color-primary 100%);
   position: relative;
   overflow: hidden;
 

@@ -1,4 +1,5 @@
 @use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
 
 header {
     position: fixed;
@@ -8,8 +9,7 @@ header {
     z-index: 100;
     background: $white;
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid $border;
-    transition: box-shadow 0.3s;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
     &.scrolled {
         box-shadow: $shadow-md;
@@ -30,6 +30,44 @@ header {
     }
 }
 
+.site-header--homepage {
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: blur(0);
+
+    nav a,
+    .btn-login {
+        color: $white;
+    }
+
+    .hamburger .bar {
+        background: $white;
+    }
+    &.scrolled {
+        background: $white;
+        box-shadow: $shadow-md;
+
+        nav a,
+        .btn-login {
+            color: $black;
+        }
+
+        .hamburger .bar {
+            background: $black;
+        }
+        .btn--oultine-white{
+            color: $color-primary !important;
+            border-color: $color-primary !important;
+        }
+    }
+}
+
+.site-header--inner {
+    background: $white;
+    border-bottom: 1px solid $border;
+    backdrop-filter: blur(16px);
+}
+
 .header-inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -48,8 +86,8 @@ nav {
 
     a {
         font-size: 0.9rem;
-        font-weight: 500;
-        color: $ink-soft;
+        font-weight: 400;
+        color: $white;
         text-decoration: none;
         padding: 8px 14px;
         border-radius: 8px;
@@ -57,8 +95,7 @@ nav {
         position: relative;
 
         &:hover {
-            color: $ink;
-            background: $white;
+            color: $color-primary;
         }
     }
 }
@@ -75,14 +112,19 @@ nav {
     cursor: pointer;
 
     &::after {
-        content: '▾';
-        font-size: 0.7rem;
+        content: '›';
+        font-size: clamp(14px, 1.5vw,168px);
+        line-height: 1;
+        margin-left: rem(4);
+        transition: transform 0.2s ease;
+        transform: rotate(90deg);
+        font-weight: 300;
     }
 }
 
 .nav-dropdown {
     position: absolute;
-    top: calc(100% + 12px);
+    top: 100%;
     left: 50%;
     transform: translate(-50%, 10px);
     min-width: 680px;
@@ -100,7 +142,7 @@ nav {
     &::before {
         content: '';
         position: absolute;
-        top: -8px;
+        top: -2px;
         left: 50%;
         transform: translateX(-50%);
         width: 16px;
@@ -124,7 +166,7 @@ nav {
         font-weight: 700;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: $ink;
+        color: $color-dark;
         margin: 0 0 10px;
     }
 
@@ -132,13 +174,13 @@ nav {
         display: block;
         font-size: 0.92rem;
         font-weight: 500;
-        color: $ink-soft;
+        color: $black !important;
         text-decoration: none;
         padding: 6px 0;
         border-radius: 0;
 
         &:hover {
-            color: $teal;
+            color: $color-primary !important;
             background: transparent;
             transform: translateX(2px);
         }

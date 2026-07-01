@@ -32,4 +32,14 @@
       color: $white;
     }
   }
+  &--outline-white {
+    background: transparent;
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      background: $white;
+      color: $color-dark;
+    }
+  }
 }

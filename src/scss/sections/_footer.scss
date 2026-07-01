@@ -1,4 +1,5 @@
 @use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
 footer {
   background: #080a0e;
   color: rgba(255, 255, 255, 0.5);
@@ -12,8 +13,20 @@ footer {
 }
 
 .footer-brand {
-  .logo { margin-bottom: 16px; }
-  .logo-name { color: $white; }
+  .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        width: rem(220);
+        margin-bottom: rem(24);
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
 
   p {
     font-size: 0.85rem;

@@ -12,7 +12,7 @@
     right: 0;
     left: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, $teal, transparent);
+    background: linear-gradient(90deg, transparent, $color-light, transparent);
   }
 }
 
@@ -24,7 +24,7 @@
 }
 
 .register-panel {
-  background: $ink;
+  background: $color-dark;
   border-radius: $radius-lg;
   padding: 40px;
   color: $white;
@@ -39,7 +39,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: rgba(26, 122, 110, 0.2);
+    background: rgba($color-light, 0.2);
   }
 }
 
@@ -80,23 +80,9 @@
 }
 
 .btn-reg-submit {
-  background: $gold;
-  border: none;
-  border-radius: 10px;
-  padding: 14px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: $ink;
+  justify-content: center;
   transition: all 0.25s;
   letter-spacing: 0.3px;
-
-  &:hover {
-    background: $gold-light;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
-  }
 }
 
 .reg-terms {
@@ -130,8 +116,8 @@
   transition: all 0.25s;
 
   &:hover {
-    border-color: $teal;
-    background: $teal-pale;
+    border-color: $color-secondary;
+    background: $color-light;
     transform: translateX(4px);
   }
 }

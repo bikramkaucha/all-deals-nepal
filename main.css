@@ -15,7 +15,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #4B1528;
+  color: #380516;
   background-color: #FBEAF0;
 }
 
@@ -86,6 +86,15 @@ code, pre {
 .btn--outline:hover {
   background: #E8185A;
   color: #ffffff;
+}
+.btn--outline-white {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.btn--outline-white:hover {
+  background: #ffffff;
+  color: #380516;
 }
 
 @keyframes fadeUp {
@@ -169,7 +178,7 @@ section {
 .link-all {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #1a7a6e;
+  color: #E8185A;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -900,14 +909,19 @@ section {
 .companies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  gap: 1.5rem;
+}
+@media (max-width: 767px) {
+  .companies-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .company-card {
   background: #f5f4f0;
   border: 1.5px solid #e2e0d8;
   border-radius: 18px;
-  padding: 24px;
+  padding: 1rem 1rem 4rem;
   transition: all 0.3s;
   cursor: pointer;
   position: relative;
@@ -920,7 +934,7 @@ section {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #1a7a6e, #c9a84c);
+  background: linear-gradient(90deg, #E8185A, #FBEAF0);
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -941,8 +955,8 @@ section {
 }
 
 .company-logo {
-  width: 52px;
-  height: 52px;
+  width: 8.125rem;
+  height: auto;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -953,39 +967,22 @@ section {
   color: #ffffff;
   flex-shrink: 0;
 }
-
-.logo-a {
-  background: linear-gradient(135deg, #1a7a6e, #2aab9a);
-}
-
-.logo-b {
-  background: linear-gradient(135deg, #c9a84c, #e8c97a);
-  color: #0d0f14;
-}
-
-.logo-c {
-  background: linear-gradient(135deg, #e85d3a, #f08060);
-}
-
-.logo-d {
-  background: linear-gradient(135deg, #5a6abf, #7b8dd4);
-}
-
-.logo-e {
-  background: linear-gradient(135deg, #2c3e50, #465670);
-}
-
-.logo-f {
-  background: linear-gradient(135deg, #8e44ad, #a55cc7);
+.company-logo img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
 }
 
 .card-badge {
-  font-size: 0.68rem;
-  font-weight: 700;
+  font-size: clamp(0.5rem, 1vw, 0.65rem);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 4px 10px;
-  border-radius: 20px;
+  padding: 0.25rem 0.625rem;
+  border-radius: 1.25rem;
 }
 
 .badge-featured {
@@ -1023,42 +1020,36 @@ section {
 
 .card-meta {
   display: flex;
-  gap: 16px;
-  padding-top: 16px;
+  gap: 0.5rem;
+  padding-top: 1rem;
   border-top: 1px solid #e2e0d8;
+  flex-wrap: wrap;
 }
-
-.meta-item {
+.card-meta .meta-item {
   display: flex;
   align-items: center;
   gap: 5px;
   font-size: 0.78rem;
   color: #7c8090;
+  flex: 1 0 calc(50% - 8px);
 }
-.meta-item svg {
+.card-meta .meta-item svg {
   width: 13px;
   height: 13px;
   color: #1a7a6e;
 }
-
-.rating {
+.card-meta .meta-item .rating {
   display: flex;
   align-items: center;
   gap: 4px;
 }
-
-.stars {
+.card-meta .meta-item .stars {
   color: #c9a84c;
   font-size: 0.75rem;
 }
 
-@media (max-width: 900px) {
-  .companies-grid {
-    grid-template-columns: 1fr;
-  }
-}
 #featured-deals {
-  background: linear-gradient(135deg, rgba(232, 24, 90, 0.05) 0%, rgba(239, 125, 166, 0.05) 100%);
+  background: #ffffff;
   padding: 80px 0;
 }
 #featured-deals .container {
@@ -1109,6 +1100,14 @@ section {
     transform: translateY(0);
   }
 }
+.deal-card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
 
 .deal-image-container {
   position: relative;
@@ -1135,7 +1134,7 @@ section {
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   z-index: 2;
@@ -1154,7 +1153,7 @@ section {
 }
 .deal-badge.badge-featured {
   background: #c9a84c;
-  color: #4B1528;
+  color: #380516;
 }
 .deal-badge.badge-new {
   background: #17c0eb;
@@ -1231,7 +1230,6 @@ section {
   color: #0d0f14;
   line-height: 1.3;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   min-height: 2.8125rem;
@@ -1288,6 +1286,7 @@ section {
 }
 .deal-actions .btn-view-details {
   flex: 1;
+  justify-content: center;
 }
 .deal-actions .btn-share {
   width: 36px;
@@ -1434,7 +1433,7 @@ section {
 }
 
 #about {
-  background: #0d0f14;
+  background: #380516;
   position: relative;
   overflow: hidden;
 }
@@ -1619,7 +1618,7 @@ section {
   right: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #1a7a6e, transparent);
+  background: linear-gradient(90deg, transparent, #FBEAF0, transparent);
 }
 
 .why-grid {
@@ -1630,7 +1629,7 @@ section {
 }
 
 .register-panel {
-  background: #0d0f14;
+  background: #380516;
   border-radius: 18px;
   padding: 40px;
   color: #ffffff;
@@ -1645,7 +1644,7 @@ section {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: rgba(26, 122, 110, 0.2);
+  background: rgba(251, 234, 240, 0.2);
 }
 
 .reg-title {
@@ -1690,22 +1689,9 @@ section {
 }
 
 .btn-reg-submit {
-  background: #c9a84c;
-  border: none;
-  border-radius: 10px;
-  padding: 14px;
-  cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #0d0f14;
+  justify-content: center;
   transition: all 0.25s;
   letter-spacing: 0.3px;
-}
-.btn-reg-submit:hover {
-  background: #e8c97a;
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
 }
 
 .reg-terms {
@@ -1744,8 +1730,8 @@ section {
   transition: all 0.25s;
 }
 .benefit-item:hover {
-  border-color: #1a7a6e;
-  background: #e8f7f5;
+  border-color: #ef7da6;
+  background: #FBEAF0;
   transform: translateX(4px);
 }
 
@@ -1781,7 +1767,7 @@ section {
   }
 }
 #newsletter {
-  background: linear-gradient(135deg, #1a7a6e 0%, #156358 100%);
+  background: linear-gradient(135deg, #380516 0%, #E8185A 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1928,10 +1914,17 @@ footer {
 }
 
 .footer-brand .logo {
-  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  width: 13.75rem;
+  margin-bottom: 1.5rem;
 }
-.footer-brand .logo-name {
-  color: #ffffff;
+.footer-brand .logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .footer-brand p {
   font-size: 0.85rem;

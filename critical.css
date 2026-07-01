@@ -15,7 +15,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #4B1528;
+  color: #380516;
   background-color: #FBEAF0;
 }
 
@@ -66,8 +66,7 @@ header {
   z-index: 100;
   background: #ffffff;
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid #e2e0d8;
-  transition: box-shadow 0.3s;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 header.scrolled {
   box-shadow: 0 6px 24px rgba(13, 15, 20, 0.09);
@@ -83,6 +82,40 @@ header .logo img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.site-header--homepage {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: blur(0);
+}
+.site-header--homepage nav a,
+.site-header--homepage .btn-login {
+  color: #ffffff;
+}
+.site-header--homepage .hamburger .bar {
+  background: #ffffff;
+}
+.site-header--homepage.scrolled {
+  background: #ffffff;
+  box-shadow: 0 6px 24px rgba(13, 15, 20, 0.09);
+}
+.site-header--homepage.scrolled nav a,
+.site-header--homepage.scrolled .btn-login {
+  color: #212121;
+}
+.site-header--homepage.scrolled .hamburger .bar {
+  background: #212121;
+}
+.site-header--homepage.scrolled .btn--oultine-white {
+  color: #E8185A !important;
+  border-color: #E8185A !important;
+}
+
+.site-header--inner {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e0d8;
+  backdrop-filter: blur(16px);
 }
 
 .header-inner {
@@ -102,8 +135,8 @@ nav {
 }
 nav a {
   font-size: 0.9rem;
-  font-weight: 500;
-  color: #3a3d4a;
+  font-weight: 400;
+  color: #ffffff;
   text-decoration: none;
   padding: 8px 14px;
   border-radius: 8px;
@@ -111,8 +144,7 @@ nav a {
   position: relative;
 }
 nav a:hover {
-  color: #0d0f14;
-  background: #ffffff;
+  color: #E8185A;
 }
 
 .nav-item {
@@ -127,13 +159,18 @@ nav a:hover {
   cursor: pointer;
 }
 .nav-category::after {
-  content: "▾";
-  font-size: 0.7rem;
+  content: "›";
+  font-size: clamp(14px, 1.5vw, 168px);
+  line-height: 1;
+  margin-left: 0.25rem;
+  transition: transform 0.2s ease;
+  transform: rotate(90deg);
+  font-weight: 300;
 }
 
 .nav-dropdown {
   position: absolute;
-  top: calc(100% + 12px);
+  top: 100%;
   left: 50%;
   transform: translate(-50%, 10px);
   min-width: 680px;
@@ -151,7 +188,7 @@ nav a:hover {
 .nav-dropdown::before {
   content: "";
   position: absolute;
-  top: -8px;
+  top: -2px;
   left: 50%;
   transform: translateX(-50%);
   width: 16px;
@@ -173,20 +210,20 @@ nav a:hover {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #0d0f14;
+  color: #380516;
   margin: 0 0 10px;
 }
 .dropdown-column a {
   display: block;
   font-size: 0.92rem;
   font-weight: 500;
-  color: #3a3d4a;
+  color: #212121 !important;
   text-decoration: none;
   padding: 6px 0;
   border-radius: 0;
 }
 .dropdown-column a:hover {
-  color: #1a7a6e;
+  color: #E8185A !important;
   background: transparent;
   transform: translateX(2px);
 }
@@ -448,7 +485,7 @@ nav a:hover {
 }
 .hero {
   min-height: 100vh;
-  background: #4B1528;
+  background: #380516;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -470,7 +507,7 @@ nav a:hover {
 }
 
 .hero-inner {
-  padding: 80px 0 0;
+  padding: 60px 0 0;
   position: relative;
   z-index: 2;
   text-align: center;

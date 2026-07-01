@@ -11,10 +11,10 @@
 <body>
 
 <!-- ═══ HEADER ════════════════════════════════════════════ -->
-<header id="site-header">
+<header id="site-header" class="site-header site-header--homepage">
   <div class="header-inner">
     <a href="#" class="logo">
-      <img src="./src/image/logo.png" alt="All Deals Nepal Logo" >
+      <img src="../src/image/logo.png" alt="All Deals Nepal Logo" >
     </a>
     <nav>
       <a href="./index.html">Home</a>
@@ -107,20 +107,6 @@
         <p class="hero-desc">
           Browse thousands of verified businesses, find local services, and put your company in front of the right audience. Trusted by businesses nationwide.
         </p>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-num">12<span>K+</span></div>
-            <div class="stat-label">Companies</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">48<span>+</span></div>
-            <div class="stat-label">Categories</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">180<span>K</span></div>
-            <div class="stat-label">Monthly Views</div>
-          </div>
-        </div>
       </div>
   
       <!-- Search Box -->
@@ -186,7 +172,7 @@
     <div id="featured-deals-grid" class="featured-deals-grid reveal">
       <div class="deal-card" style="animation-delay: 0ms">
         <div class="deal-image-container">
-          <img src="https://via.placeholder.com/300x200?text=Coffee+Deal" alt="Premium Coffee Package" class="deal-image">
+          <img src="./src/image/deal1.jpg" alt="Premium Coffee Package" class="deal-image" width="266" height="200">
           <span class="deal-badge badge-trending">Trending</span>
           <button class="deal-bookmark" data-deal-id="1" aria-label="Bookmark deal">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -226,7 +212,7 @@
   
       <div class="deal-card" style="animation-delay: 50ms">
         <div class="deal-image-container">
-          <img src="https://via.placeholder.com/300x200?text=Web+Dev" alt="Web Development Bundle" class="deal-image">
+          <img src="./src/image/deal2.jpg" alt="Web Development Bundle" class="deal-image" width="266" height="200">
           <span class="deal-badge badge-trending">Trending</span>
           <button class="deal-bookmark" data-deal-id="2" aria-label="Bookmark deal">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -266,7 +252,7 @@
 
       <div class="deal-card" style="animation-delay: 100ms">
         <div class="deal-image-container">
-          <img src="https://via.placeholder.com/300x200?text=Fitness" alt="Fitness Membership Offer" class="deal-image">
+          <img src="./src/image/deal3.jpg" alt="Premium Coffee Package" class="deal-image" width="266" height="200">
           <span class="deal-badge badge-trending">Trending</span>
           <button class="deal-bookmark" data-deal-id="3" aria-label="Bookmark deal">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -306,7 +292,7 @@
 
       <div class="deal-card" style="animation-delay: 150ms">
         <div class="deal-image-container">
-          <img src="https://via.placeholder.com/300x200?text=Interior" alt="Interior Design Consultation" class="deal-image">
+          <img src="./src/image/deal4.jpg" alt="Premium Coffee Package" class="deal-image" width="266" height="200">
           <span class="deal-badge badge-trending">Trending</span>
           <button class="deal-bookmark" data-deal-id="4" aria-label="Bookmark deal">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -435,140 +421,298 @@
     <div class="companies-grid">
 
       <div class="company-card reveal">
-        <div class="card-top">
-          <div class="company-logo logo-a">TS</div>
-          <span class="card-badge badge-featured">⭐ Featured</span>
+        <div class="company-details">
+          <div class="card-top">
+            <div class="company-logo"><img src="./src/image/logo.png" alt="TechSphere Solutions Logo" width="80" height="80"></div>
+            <span class="card-badge badge-featured">⭐ Featured</span>
+          </div>
+          <div class="company-name">TechSphere Solutions</div>
+          <div class="company-category">Technology & IT Services</div>
+          <p class="company-desc">Custom software development, cloud solutions, and digital transformation services for enterprises.</p>
+          <div class="card-meta">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kathmandu
+            </div>
+            <div class="meta-item rating">
+              <span class="stars">★★★★★</span> 4.9
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Est. 2014
+            </div>
+          </div>
         </div>
-        <div class="company-name">TechSphere Solutions</div>
-        <div class="company-category">Technology & IT Services</div>
-        <p class="company-desc">Custom software development, cloud solutions, and digital transformation services for enterprises.</p>
-        <div class="card-meta">
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Kathmandu
-          </div>
-          <div class="meta-item rating">
-            <span class="stars">★★★★★</span> 4.9
-          </div>
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            Est. 2014
-          </div>
-        </div>
-      </div>
-
-      <div class="company-card reveal">
-        <div class="card-top">
-          <div class="company-logo logo-b">GF</div>
-          <span class="card-badge badge-featured">⭐ Featured</span>
-        </div>
-        <div class="company-name">GoldFinance Group</div>
-        <div class="company-category">Finance & Investment</div>
-        <p class="company-desc">Comprehensive financial services including loans, investment consulting, and wealth management.</p>
-        <div class="card-meta">
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Lalitpur
-          </div>
-          <div class="meta-item rating">
-            <span class="stars">★★★★★</span> 4.8
-          </div>
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            Est. 2008
-          </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="4">View Details</button>
+          <button class="btn-share" data-deal-id="4" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
         </div>
       </div>
 
       <div class="company-card reveal">
-        <div class="card-top">
-          <div class="company-logo logo-c">HC</div>
-          <span class="card-badge badge-new">✦ New</span>
+        <div class="company-details">
+          <div class="card-top">
+            <div class="company-logo"><img src="./src/image/logo.png" alt="TechSphere Solutions Logo" width="80" height="80"></div>
+            <span class="card-badge badge-featured">⭐ Featured</span>
+          </div>
+          <div class="company-name">GoldFinance Group</div>
+          <div class="company-category">Finance & Investment</div>
+          <p class="company-desc">Comprehensive financial services including loans, investment consulting, and wealth management.</p>
+          <div class="card-meta">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lalitpur
+            </div>
+            <div class="meta-item rating">
+              <span class="stars">★★★★★</span> 4.8
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Est. 2008
+            </div>
+          </div>
         </div>
-        <div class="company-name">HealthCare Plus</div>
-        <div class="company-category">Healthcare & Medical</div>
-        <p class="company-desc">Modern medical facilities with specialist doctors, diagnostics, and telemedicine services.</p>
-        <div class="card-meta">
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Pokhara
-          </div>
-          <div class="meta-item rating">
-            <span class="stars">★★★★☆</span> 4.6
-          </div>
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            Est. 2021
-          </div>
-        </div>
-      </div>
-
-      <div class="company-card reveal">
-        <div class="card-top">
-          <div class="company-logo logo-d">EA</div>
-          <span class="card-badge badge-featured">⭐ Featured</span>
-        </div>
-        <div class="company-name">EduAcademy Nepal</div>
-        <div class="company-category">Education & Training</div>
-        <p class="company-desc">Professional certification courses, skill development programs, and vocational training centres.</p>
-        <div class="card-meta">
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Kathmandu
-          </div>
-          <div class="meta-item rating">
-            <span class="stars">★★★★★</span> 4.9
-          </div>
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            Est. 2011
-          </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="4">View Details</button>
+          <button class="btn-share" data-deal-id="4" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
         </div>
       </div>
 
       <div class="company-card reveal">
-        <div class="card-top">
-          <div class="company-logo logo-e">BM</div>
-          <span class="card-badge badge-new">✦ New</span>
+        <div class="company-details">
+          <div class="card-top">
+            <div class="company-logo"><img src="./src/image/logo.png" alt="TechSphere Solutions Logo" width="80" height="80"></div>
+            <span class="card-badge badge-new">✦ New</span>
+          </div>
+          <div class="company-name">HealthCare Plus</div>
+          <div class="company-category">Healthcare & Medical</div>
+          <p class="company-desc">Modern medical facilities with specialist doctors, diagnostics, and telemedicine services.</p>
+          <div class="card-meta">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Pokhara
+            </div>
+            <div class="meta-item rating">
+              <span class="stars">★★★★☆</span> 4.6
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Est. 2021
+            </div>
+          </div>
         </div>
-        <div class="company-name">BuildMasters Co.</div>
-        <div class="company-category">Construction & Real Estate</div>
-        <p class="company-desc">Residential and commercial construction, interior design, and property development firm.</p>
-        <div class="card-meta">
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Bhaktapur
-          </div>
-          <div class="meta-item rating">
-            <span class="stars">★★★★☆</span> 4.5
-          </div>
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            Est. 2019
-          </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="4">View Details</button>
+          <button class="btn-share" data-deal-id="4" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
         </div>
       </div>
 
       <div class="company-card reveal">
-        <div class="card-top">
-          <div class="company-logo logo-f">TT</div>
-          <span class="card-badge badge-featured">⭐ Featured</span>
+        <div class="company-details">
+          <div class="card-top">
+            <div class="company-logo"><img src="../src/image/logo.png" alt="TechSphere Solutions Logo" width="80" height="80"></div>
+            <span class="card-badge badge-featured">⭐ Featured</span>
+          </div>
+          <div class="company-name">EduAcademy Nepal</div>
+          <div class="company-category">Education & Training</div>
+          <p class="company-desc">Professional certification courses, skill development programs, and vocational training centres.</p>
+          <div class="card-meta">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kathmandu
+            </div>
+            <div class="meta-item rating">
+              <span class="stars">★★★★★</span> 4.9
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Est. 2011
+            </div>
+          </div>
         </div>
-        <div class="company-name">TrekTours Nepal</div>
-        <div class="company-category">Travel & Tourism</div>
-        <p class="company-desc">Award-winning trekking, adventure tours, and customised travel packages across the Himalayas.</p>
-        <div class="card-meta">
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Pokhara
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="4">View Details</button>
+          <button class="btn-share" data-deal-id="4" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="company-card reveal">
+        <div class="company-details">
+          <div class="card-top">
+            <div class="company-logo"><img src="./src/image/logo.png" alt="TechSphere Solutions Logo" width="80" height="80"></div>
+            <span class="card-badge badge-new">✦ New</span>
           </div>
-          <div class="meta-item rating">
-            <span class="stars">★★★★★</span> 5.0
+          <div class="company-name">BuildMasters Co.</div>
+          <div class="company-category">Construction & Real Estate</div>
+          <p class="company-desc">Residential and commercial construction, interior design, and property development firm.</p>
+          <div class="card-meta">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Bhaktapur
+            </div>
+            <div class="meta-item rating">
+              <span class="stars">★★★★☆</span> 4.5
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Est. 2019
+            </div>
           </div>
-          <div class="meta-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-            Est. 2007
+        </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="4">View Details</button>
+          <button class="btn-share" data-deal-id="4" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="company-card reveal">
+        <div class="company-details">
+          <div class="card-top">
+            <div class="company-logo"><img src="./src/image/logo.png" alt="TechSphere Solutions Logo" width="80" height="80"></div>
+            <span class="card-badge badge-featured">⭐ Featured</span>
           </div>
+          <div class="company-name">TrekTours Nepal</div>
+          <div class="company-category">Travel & Tourism</div>
+          <p class="company-desc">Award-winning trekking, adventure tours, and customised travel packages across the Himalayas.</p>
+          <div class="card-meta">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Pokhara
+            </div>
+            <div class="meta-item rating">
+              <span class="stars">★★★★★</span> 5.0
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Est. 2007
+            </div>
+          </div>
+
+        </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="4">View Details</button>
+          <button class="btn-share" data-deal-id="4" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="company-card reveal">
+        <div class="company-details">
+          <div class="card-top">
+            <div class="company-logo"><img src="./src/image/logo.png" alt="TechSphere Solutions Logo" width="80" height="80"></div>
+            <span class="card-badge badge-featured">⭐ Featured</span>
+          </div>
+          <div class="company-name">TrekTours Nepal</div>
+          <div class="company-category">Travel & Tourism</div>
+          <p class="company-desc">Award-winning trekking, adventure tours, and customised travel packages across the Himalayas.</p>
+          <div class="card-meta">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Pokhara
+            </div>
+            <div class="meta-item rating">
+              <span class="stars">★★★★★</span> 5.0
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Est. 2007
+            </div>
+          </div>
+
+        </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="4">View Details</button>
+          <button class="btn-share" data-deal-id="4" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="company-card reveal">
+        <div class="company-details">
+          <div class="card-top">
+            <div class="company-logo"><img src="./src/image/logo.png" alt="TechSphere Solutions Logo" width="80" height="80"></div>
+            <span class="card-badge badge-featured">⭐ Featured</span>
+          </div>
+          <div class="company-name">TrekTours Nepal</div>
+          <div class="company-category">Travel & Tourism</div>
+          <p class="company-desc">Award-winning trekking, adventure tours, and customised travel packages across the Himalayas.</p>
+          <div class="card-meta">
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Pokhara
+            </div>
+            <div class="meta-item rating">
+              <span class="stars">★★★★★</span> 5.0
+            </div>
+            <div class="meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              Est. 2007
+            </div>
+          </div>
+        </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="4">View Details</button>
+          <button class="btn-share" data-deal-id="4" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
         </div>
       </div>
 
@@ -584,11 +728,11 @@
     <div class="about-inner">
       <div class="reveal">
         <span class="section-label">Our Story</span>
-        <h2 class="section-title" style="color:var(--white);">Nepal's Most <em style="color:var(--gold-light)">Trusted</em> Business Platform</h2>
-        <p class="section-desc" style="color:rgba(255,255,255,0.5); margin-bottom: 32px;">
+        <h2 class="section-title" >Nepal's Most <em style="color:var(--gold-light)">Trusted</em> Business Platform</h2>
+        <p class="section-desc">
           BizHub was founded with a single mission: to bridge the gap between businesses and customers across Nepal. We believe every company, big or small, deserves a powerful digital presence.
         </p>
-        <p class="section-desc" style="color:rgba(255,255,255,0.5); margin-bottom: 32px;">
+        <p class="section-desc">
           Since 2018, we've helped over 12,000 companies build their profiles, manage offers, and connect with thousands of potential customers daily. Our platform is built for the Nepali business ecosystem.
         </p>
         <div style="display:flex; gap:32px; flex-wrap:wrap;">
@@ -673,7 +817,7 @@
             <option>Education</option>
             <option>Other</option>
           </select>
-          <button class="btn-reg-submit">Create Free Company Profile →</button>
+          <button class="btn btn--primary btn-reg-submit">Create Free Company Profile →</button>
         </div>
         <p class="reg-terms">By registering you agree to our <a href="#">Terms of Service</a> & <a href="#">Privacy Policy</a></p>
       </div>
@@ -748,7 +892,7 @@
           </div>
           <div class="nf-row">
             <input class="nf-input" type="email" placeholder="Your Email Address">
-            <button class="nf-btn">Subscribe</button>
+            <button class="btn btn--outline-white">Subscribe</button>
           </div>
           <p class="nf-note">📩 Join 25,000+ subscribers. Unsubscribe anytime.</p>
         </div>
@@ -763,16 +907,14 @@
     <div class="footer-main">
       <div class="footer-brand">
         <a href="#" class="logo">
-          <div class="logo-mark"></div>
-          <span class="logo-name" style="color:var(--white);">Biz<span>Hub</span></span>
+          <img src="../src/image/logo.png" alt="All Deals Nepal Logo" >
         </a>
         <p>Nepal's leading business directory connecting customers with verified companies across all industries and locations nationwide.</p>
         <div class="footer-address">
-          <strong>BizHub Nepal Pvt. Ltd.</strong>
-          New Baneshwor, Kathmandu 44600<br>
-          Bagmati Province, Nepal<br>
-          📞 +977-1-4XXXXXX<br>
-          ✉️ hello@bizhub.com.np
+          <strong>All Deals Nepal Pvt. Ltd.</strong>
+          <p>Baneshwor, Kathmandu 44600 Bagmati Province, Nepal</p>
+          <a href="tel:+97714XXXXXX"><span class="icon-phone"></span>+977-1-4XXXXXX</a><br>
+          <a href="mailto:info@alldealsnepal.com"><span class="icon-envelope"></span>info@alldealsnepal.com</a>
         </div>
       </div>
 
@@ -815,7 +957,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 <strong>BizHub Nepal Pvt. Ltd.</strong> All rights reserved.</p>
+      <p>© 2026 <strong>All Deals Nepal Pvt. Ltd.</strong> All rights reserved.</p>
       <div class="footer-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>

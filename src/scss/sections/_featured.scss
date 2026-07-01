@@ -1,4 +1,5 @@
 @use 'abstracts/variables' as *; 
+@use 'abstracts/mixins' as *;
 
 #featured {
   background: $white;
@@ -7,14 +8,18 @@
 .companies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
+  gap: rem(24);
+  
+  @include breakpoint-down (md) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .company-card {
   background: $surface;
   border: 1.5px solid $border;
   border-radius: $radius-lg;
-  padding: 24px;
+  padding:rem(16) rem(16) rem(64);
   transition: all 0.3s;
   cursor: pointer;
   position: relative;
@@ -27,7 +32,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, $teal, $gold);
+    background: linear-gradient(90deg, $color-primary, $color-light);
     opacity: 0;
     transition: opacity 0.3s;
   }
@@ -49,8 +54,8 @@
 }
 
 .company-logo {
-  width: 52px;
-  height: 52px;
+  width: rem(130);
+  height: auto;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -60,23 +65,23 @@
   font-size: 1.1rem;
   color: $white;
   flex-shrink: 0;
+  
+  img{
+    width:100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
 }
 
 // Logo color variants
-.logo-a { background: linear-gradient(135deg, #1a7a6e, #2aab9a); }
-.logo-b { background: linear-gradient(135deg, #c9a84c, #e8c97a); color: $ink; }
-.logo-c { background: linear-gradient(135deg, #e85d3a, #f08060); }
-.logo-d { background: linear-gradient(135deg, #5a6abf, #7b8dd4); }
-.logo-e { background: linear-gradient(135deg, #2c3e50, #465670); }
-.logo-f { background: linear-gradient(135deg, #8e44ad, #a55cc7); }
-
 .card-badge {
-  font-size: 0.68rem;
-  font-weight: 700;
+  font-size: clamp(0.5rem, 1vw, 0.65rem);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 4px 10px;
-  border-radius: 20px;
+  padding: rem(4) rem(10);
+  border-radius: rem(20);
 }
 
 .badge-featured {
@@ -114,38 +119,33 @@
 
 .card-meta {
   display: flex;
-  gap: 16px;
-  padding-top: 16px;
+  gap: rem(8);
+  padding-top: rem(16);
   border-top: 1px solid $border;
-}
+  flex-wrap: wrap;
 
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.78rem;
-  color: $ink-muted;
-
-  svg {
-    width: 13px;
-    height: 13px;
-    color: $teal;
-  }
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.stars {
-  color: $gold;
-  font-size: 0.75rem;
-}
-
-@media (max-width: 900px) {
-  .companies-grid {
-    grid-template-columns: 1fr;
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.78rem;
+    color: $ink-muted;
+    flex: 1 0 calc(50% - 8px);
+  
+    svg {
+      width: 13px;
+      height: 13px;
+      color: $teal;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .stars {
+      color: $gold;
+      font-size: 0.75rem;
+    }
   }
 }
