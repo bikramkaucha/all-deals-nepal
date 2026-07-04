@@ -1,3 +1,4 @@
+import Swiper from '../../../node_modules/swiper/swiper-bundle.js';
 // ═══════════════════════════════════════════════════════
 // Category Slider (Swiper)
 // ═══════════════════════════════════════════════════════
