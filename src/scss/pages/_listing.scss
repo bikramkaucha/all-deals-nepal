@@ -89,7 +89,7 @@
   transition: border-color 0.2s;
   min-width: 160px;
 
-  &:focus { border-color: $teal; }
+  &:focus { border-color: $color-primary; }
 
   @include breakpoint-down(sm) {
     min-width: 120px;
@@ -98,15 +98,7 @@
 }
 
 .btn-search-go {
-  background: $teal;
-  color: $white;
-  border: none;
-  border-radius: 10px;
   padding: 0 20px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
   transition: all 0.2s;
   white-space: nowrap;
   display: flex;
@@ -114,7 +106,6 @@
   gap: 7px;
 
   &:hover {
-    background: $teal-light;
     transform: translateY(-1px);
   }
 

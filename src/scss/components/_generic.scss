@@ -19,14 +19,20 @@
 }
 // section common style
 section {
-  padding:60px 0;
+  padding:40px 0;
+  @include breakpoint-up(md) {
+    padding: 60px 0;
+  }
 }
 
 .container {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 16px;
+  @include breakpoint-up(md) {
+    padding: 0 32px;
+  }
 }
 
 .section-label {

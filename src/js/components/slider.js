@@ -12,7 +12,7 @@ export function initCategorySlider() {
   if (!swiperContainer) return;
 
   new Swiper('.categories-swiper', {
-    slidesPerView: 1.1,
+    slidesPerView: 1.6,
     spaceBetween: 18,
     loop: false,
     navigation: {
