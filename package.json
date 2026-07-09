@@ -30,6 +30,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "swiper": "^14.0.1"
+    "esmify": "^2.1.1",
+    "swiper": "^11.2.10"
   }
 }

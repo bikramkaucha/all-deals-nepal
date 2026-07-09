@@ -18,7 +18,7 @@
   margin-bottom: 18px;
 
   a {
-    color: $teal;
+    color: $color-primary;
     text-decoration: none;
 
     &:hover { text-decoration: underline; }
@@ -31,7 +31,6 @@
 
 .search-bar-wrap {
   background: $white;
-  border: 1.5px solid $border;
   border-radius: $radius-lg;
   padding: 14px 16px;
   margin-bottom: 18px;
@@ -59,7 +58,7 @@
   padding: 10px 14px;
   transition: border-color 0.2s;
 
-  &:focus-within { border-color: $teal; }
+  &:focus-within { border-color: $border-2; }
 
   svg { width: 16px; height: 16px; color: $ink-muted; flex-shrink: 0; }
 
@@ -135,6 +134,50 @@
   strong { color: $ink; font-weight: 600; }
 }
 
+.results-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-filter-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid $border;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: $white;
+  color: $ink;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: $shadow-sm;
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  @include breakpoint-down(md) {
+    display: inline-flex;
+  }
+}
+
+.filter-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: $color-primary;
+  color: $white;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
 // ─── View Toggles ─────────────────────────────────────────────────────────────
 
 .view-toggles { display: flex; gap: 4px; }
@@ -153,9 +196,9 @@
   color: $ink-muted;
 
   &.active {
-    border-color: $teal;
-    color: $teal;
-    background: $teal-pale;
+    border-color: $color-primary;
+    color: $white;
+    background: $color-primary;
   }
 
   svg { width: 15px; height: 15px; }

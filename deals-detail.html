@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Bundle — All Deals Nepal</title>
+<link rel="preload" href="./critical.min.css" as="style" onload="this.rel='stylesheet'">
+<link rel="stylesheet" href="main.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body>
+
+<!-- ══ HEADER ═══════════════════════════════════════════ -->
+<header id="site-header" class="site-header site-header--inner">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <img src="./src/image/logo.png" alt="All Deals Nepal Logo" class="logo-mark">
+    </a>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="#about">About Us</a>
+      <div class="nav-item">
+        <a href="./listing.html" class="nav-category">Business</a>
+        <div class="nav-dropdown" aria-label="Business categories">
+          <div class="dropdown-grid">
+            <div class="dropdown-column">
+              <h4>Popular</h4>
+              <a href="./listing.html">Technology &amp; IT</a>
+              <a href="./listing.html">Finance &amp; Banking</a>
+              <a href="./listing.html">Healthcare</a>
+              <a href="./listing.html">Education</a>
+            </div>
+            <div class="dropdown-column">
+              <h4>Retail</h4>
+              <a href="./listing.html">Retail &amp; Shopping</a>
+              <a href="./listing.html">Food &amp; Restaurant</a>
+              <a href="./listing.html">Travel &amp; Tourism</a>
+              <a href="./listing.html">Construction</a>
+            </div>
+            <div class="dropdown-column">
+              <h4>Services</h4>
+              <a href="./listing.html">Real Estate</a>
+              <a href="./listing.html">Logistics</a>
+              <a href="./listing.html">Marketing</a>
+              <a href="./listing.html">Legal Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#newsletter">Contact</a><a href="#deals-detail.html">deals detail</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="#" class="btn btn--outline">Sign In</a>
+      <a href="#why" class="btn btn--primary">Register Company</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-drawer">
+    <nav class="mobile-nav">
+      <a href="#featured">Home</a>
+      <a href="#about">About Us</a>
+      <div class="mobile-nav-item">
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false">
+          <span>Business</span>
+          <span class="chevron">▾</span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="./listing.html">Technology &amp; IT</a>
+          <a href="./listing.html">Finance &amp; Banking</a>
+          <a href="./listing.html">Healthcare</a>
+          <a href="./listing.html">Retail &amp; Shopping</a>
+          <a href="./listing.html">Food &amp; Restaurant</a>
+        </div>
+      </div>
+      <a href="#newsletter">Contact</a><a href="#deals-detail.html">deals detail</a>
+    </nav>
+    <div class="mobile-cta">
+      <a href="#" class="btn-login">Sign In</a>
+      <a href="#why" class="btn-register">Register Company</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAGE WRAP ════════════════════════════════════════ -->
+<div class="page-wrap deal-detail-page">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="listing.html">Company Listings</a>
+    <span>›</span>
+    <span>Web Development Bundle</span>
+  </nav>
+
+  <!-- ── DEAL DETAIL ────────────────────────────────── -->
+  <section class="deal-detail">
+
+    <!-- Left half: image slider -->
+    <div class="deal-detail-media">
+      <div class="swiper deal-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./src/image/deal2.jpg" alt="Web Development Bundle — preview 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/image/deal2-2.jpg" alt="Web Development Bundle — preview 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="./src/image/deal2-3.jpg" alt="Web Development Bundle — preview 3">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <button class="swiper-button-prev" aria-label="Previous image"></button>
+        <button class="swiper-button-next" aria-label="Next image"></button>
+      </div>
+      <span class="deal-badge badge-trending">Trending</span>
+      <button class="deal-bookmark deal-bookmark--floating" data-deal-id="2" aria-label="Bookmark deal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Right half: details -->
+    <div class="deal-detail-info">
+
+      <h1 class="deal-detail-name">Web Development Bundle</h1>
+
+      <div class="deal-detail-subrow">
+        <div class="deal-detail-company">
+          <p class="deal-provider">Tech Solutions Ltd</p>
+          <div class="deal-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Kathmandu, Patan</span>
+          </div>
+        </div>
+        <button class="deal-bookmark" data-deal-id="2" aria-label="Bookmark deal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="deal-reviews">
+        <div class="deal-stars">★★★★★</div>
+        <span class="deal-rating">4.9</span>
+        <span class="deal-review-count">(512 reviews)</span>
+      </div>
+
+      <div class="deal-categories">
+        <span class="deal-category-tag">Web Development</span>
+        <span class="deal-category-tag">Technology &amp; IT</span>
+        <span class="deal-category-tag">Bundle Offer</span>
+      </div>
+
+      <p class="deal-description">
+        A complete website package built for small and growing businesses —
+        design, development, and one year of hosting bundled at a fixed price.
+        Includes up to 6 pages, mobile-responsive layout, basic SEO setup, and
+        a dedicated developer for revisions during the build.
+      </p>
+
+      <div class="deal-detail-actions">
+        <button class="btn btn--primary btn-buy" data-deal-id="2">Buy This Deal</button>
+        <button class="btn-share" data-deal-id="2" aria-label="Share deal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SIMILAR DEALS ──────────────────────────────── -->
+  <section class="similar-deals">
+    <h2 class="section-title">Similar Deals</h2>
+
+    <div class="deal-grid">
+
+      <div class="deal-card" style="animation-delay: 50ms">
+        <div class="deal-image-container">
+          <img src="./src/image/deal1.jpg" alt="Logo Design Package" class="deal-image" width="266" height="200">
+          <span class="deal-badge badge-new">New</span>
+          <button class="deal-bookmark" data-deal-id="1" aria-label="Bookmark deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="deal-content">
+          <h3 class="deal-name">Logo Design Package</h3>
+          <p class="deal-provider">Creative Studio Nepal</p>
+          <div class="deal-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Kathmandu, Baneshwor</span>
+          </div>
+          <div class="deal-reviews">
+            <div class="deal-stars">★★★★★</div>
+            <span class="deal-rating">4.7</span>
+            <span class="deal-review-count">(238)</span>
+          </div>
+        </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="1">View Details</button>
+          <button class="btn-share" data-deal-id="1" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="deal-card" style="animation-delay: 100ms">
+        <div class="deal-image-container">
+          <img src="./src/image/deal3.jpg" alt="SEO Growth Package" class="deal-image" width="266" height="200">
+          <span class="deal-badge badge-trending">Trending</span>
+          <button class="deal-bookmark" data-deal-id="3" aria-label="Bookmark deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="deal-content">
+          <h3 class="deal-name">SEO Growth Package</h3>
+          <p class="deal-provider">RankUp Digital</p>
+          <div class="deal-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Lalitpur, Jawalakhel</span>
+          </div>
+          <div class="deal-reviews">
+            <div class="deal-stars">★★★★★</div>
+            <span class="deal-rating">4.8</span>
+            <span class="deal-review-count">(164)</span>
+          </div>
+        </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="3">View Details</button>
+          <button class="btn-share" data-deal-id="3" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="deal-card" style="animation-delay: 150ms">
+        <div class="deal-image-container">
+          <img src="./src/image/deal4.jpg" alt="Mobile App MVP Build" class="deal-image" width="266" height="200">
+          <span class="deal-badge badge-limited">Limited</span>
+          <button class="deal-bookmark" data-deal-id="4" aria-label="Bookmark deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="deal-content">
+          <h3 class="deal-name">Mobile App MVP Build</h3>
+          <p class="deal-provider">Tech Solutions Ltd</p>
+          <div class="deal-location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Kathmandu, Patan</span>
+          </div>
+          <div class="deal-reviews">
+            <div class="deal-stars">★★★★★</div>
+            <span class="deal-rating">4.6</span>
+            <span class="deal-review-count">(97)</span>
+          </div>
+        </div>
+        <div class="deal-actions">
+          <button class="btn btn--primary btn-view-details" data-deal-id="4">View Details</button>
+          <button class="btn-share" data-deal-id="4" aria-label="Share deal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-mark"></div>
+          <span class="logo-name" style="color:var(--white);">Biz<span>Hub</span></span>
+        </a>
+        <p>Nepal's leading business directory connecting customers with verified companies across all industries and locations nationwide.</p>
+        <div class="footer-address">
+          <strong>BizHub Nepal Pvt. Ltd.</strong>
+          New Baneshwor, Kathmandu 44600<br>
+          Bagmati Province, Nepal<br>
+          📞 +977-1-4XXXXXX<br>
+          ✉️ hello@bizhub.com.np
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Technology & IT</a></li>
+          <li><a href="#">Finance & Banking</a></li>
+          <li><a href="#">Healthcare</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Construction</a></li>
+          <li><a href="#">Food & Dining</a></li>
+          <li><a href="#">Travel & Tourism</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Pricing Plans</a></li>
+          <li><a href="#">Success Stories</a></li>
+          <li><a href="#">Blog & News</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Register Company</a></li>
+          <li><a href="#">Manage Profile</a></li>
+          <li><a href="#">Post an Offer</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Report Issue</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 <strong>BizHub Nepal Pvt. Ltd.</strong> All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.deal-swiper', {
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+  });
+</script>
+<script src="./dist/js/main.min.js" type="text/javascript"></script>
+</body>
+</html>

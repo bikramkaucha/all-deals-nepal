@@ -22,17 +22,25 @@
   width: 300px;
   flex-shrink: 0;
   position: sticky;
-  top: calc(var(--header-h) + 16px);
-  max-height: calc(100vh - var(--header-h) - 32px);
+  top: calc($header-h + 16px);
+  max-height: calc(100vh - $header-h - 32px);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 4px;
   scrollbar-width: thin;
-  scrollbar-color: var(--border) transparent;
+  scrollbar-color: rgba(217, 93, 59, 0.8) transparent;
+  scrollbar-gutter: stable;
 
-  &::-webkit-scrollbar { width: 4px; }
-  &::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  &::-webkit-scrollbar { width: 6px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(217, 93, 59, 0.9), rgba(26, 122, 110, 0.9));
+    border-radius: 999px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(217, 93, 59, 1), rgba(26, 122, 110, 1));
+  }
 
   @include breakpoint-down(md) {
     position: fixed;
@@ -45,8 +53,8 @@
     transform: translateX(-100%);
     transition: transform 0.35s cubic-bezier(.4, 0, .2, 1);
     border-radius: 0;
-    background: var(--white);
-    box-shadow: var(--shadow-lg);
+    background: $white;
+    box-shadow: $shadow-lg;
 
     &.mobile-open { transform: translateX(0); }
   }
@@ -54,9 +62,8 @@
 
 .sidebar-card {
   background: $white;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+  border: 1.5px solid $border-dark;
+  border-radius: $radius-lg;
 
   @include breakpoint-down(md) {
     border: none;
@@ -71,7 +78,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 18px 14px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid $border-dark;
 }
 
 .sidebar-title {
@@ -107,7 +114,7 @@
 .filter-section {
   padding: 14px 18px 16px;
 
-  & + & { border-top: 1px solid var(--border); }
+  & + & { border-top: 1px solid $border-dark; }
 }
 
 .filter-label {
@@ -125,7 +132,7 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: var(--border);
+    background: $border-dark;
   }
 }
 
@@ -138,7 +145,7 @@
   max-height: 240px;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: var(--border) transparent;
+  scrollbar-color: $border-dark transparent;
   padding-right: 4px;
 
   &::-webkit-scrollbar { width: 3px; }
@@ -160,8 +167,8 @@
   input[type="checkbox"] { display: none; }
 
   input:checked ~ .check-box {
-    background: var(--teal);
-    border-color: var(--teal);
+    background: $border-2;
+    border-color: $border-2;
 
     svg { opacity: 1; }
   }
@@ -171,18 +178,18 @@
   width: 17px;
   height: 17px;
   border-radius: 5px;
-  border: 1.5px solid var(--border-dark);
+  border: 1.5px solid $border-2;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   transition: all 0.2s;
-  background: var(--white);
+  background: $white;
 
   svg {
     width: 10px;
     height: 10px;
-    color: var(--white);
+    color: $white;
     opacity: 0;
     transition: opacity 0.15s;
   }
@@ -190,15 +197,15 @@
 
 .check-label {
   font-size: 0.85rem;
-  color: var(--ink-soft);
+  color: $color-dark;
   flex: 1;
   line-height: 1.3;
 }
 
 .check-count {
   font-size: 0.72rem;
-  color: var(--ink-muted);
-  background: var(--surface-2);
+  color: $ink-muted;
+  background: $surface-2;
   padding: 2px 7px;
   border-radius: 20px;
 }
@@ -219,7 +226,7 @@
   text-align: center;
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--ink-muted);
+  color: $ink-muted;
   padding: 6px;
   border-radius: 7px;
   cursor: pointer;
@@ -228,9 +235,9 @@
   background: none;
 
   &.active {
-    background: var(--white);
-    color: var(--ink);
-    box-shadow: var(--shadow-sm);
+    background: $color-primary;
+    color: $white;
+    box-shadow: $shadow-sm;
   }
 }
 
@@ -241,7 +248,7 @@
   align-items: center;
   gap: 8px;
   background: var(--surface);
-  border: 1.5px solid var(--border);
+  border: 1.5px solid $border-dark;
   border-radius: 9px;
   padding: 7px 10px;
   margin-bottom: 8px;
@@ -289,9 +296,12 @@
   align-items: center;
   justify-content: center;
 
-  &:hover { background: var(--teal-pale); color: var(--teal); }
-  &.active { background: var(--teal); color: var(--white); }
-  &.disabled { color: var(--border-dark); cursor: default; pointer-events: none; }
+  &:hover { 
+      background: $color-primary;
+      color: $color-primary; 
+    }
+  &.active { background: $color-primary; color: $white; }
+  &.disabled { color: $color-dark; cursor: default; pointer-events: none; }
 }
 
 // ─── Location List ────────────────────────────────────────────────────────────
@@ -303,7 +313,7 @@
   max-height: 200px;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: var(--border) transparent;
+  scrollbar-color: $border-dark transparent;
 
   &::-webkit-scrollbar { width: 3px; }
   &::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 3px; }
@@ -322,7 +332,7 @@
 
 .active-filters {
   padding: 12px 18px 14px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid $border-dark;
   display: none;
   flex-wrap: wrap;
   gap: 6px;

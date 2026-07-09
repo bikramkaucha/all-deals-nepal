@@ -74,8 +74,27 @@
     outline: none;
     transition: border-color 0.2s;
 
-    &::placeholder { color: rgba(255, 255, 255, 0.3); }
-    &:focus        { border-color: $teal-light; }
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:focus {
+      border-color: $border-2;
+    }
+  }
+
+  select {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: $white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    option{
+      color:$color-dark;
+    }
   }
 }
 
@@ -91,13 +110,26 @@
   text-align: center;
   margin-top: 4px;
 
-  a { color: rgba(255, 255, 255, 0.5); }
+  a {
+    color: rgba(255, 255, 255, 0.5);
+    &:hover {
+      color: $white;
+    }
+  }
 }
 
 .benefits-panel {
-  .section-label { margin-bottom: 8px; }
-  .section-title { margin-bottom: 8px; }
-  .section-desc  { margin-bottom: 32px; }
+  .section-label {
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    margin-bottom: 8px;
+  }
+
+  .section-desc {
+    margin-bottom: 32px;
+  }
 }
 
 .benefits-list {

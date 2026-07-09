@@ -1,18 +1,12 @@
-import Swiper from '../../../node_modules/swiper/swiper-bundle.js';
-// ═══════════════════════════════════════════════════════
-// Category Slider (Swiper)
-// ═══════════════════════════════════════════════════════
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
 export function initCategorySlider() {
-  // Check if Swiper is available globally
-  if (typeof Swiper === 'undefined') {
-    return;
-  }
-
   const swiperContainer = document.querySelector('.categories-swiper');
   if (!swiperContainer) return;
 
   new Swiper('.categories-swiper', {
+    modules: [Navigation, Pagination],
     slidesPerView: 1.6,
     spaceBetween: 18,
     loop: false,

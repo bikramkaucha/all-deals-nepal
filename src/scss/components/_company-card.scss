@@ -18,9 +18,9 @@
 
 .company-card {
   background: var(--white);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 20px;
+  border: 1.5px solid $border-dark;
+  border-radius: $radius-lg;
+  padding: 20px 20px 70px;
   transition: all 0.28s;
   cursor: pointer;
   position: relative;
@@ -39,11 +39,16 @@
 
   &:hover {
     border-color: transparent;
-    box-shadow: var(--shadow-lg);
+    box-shadow: $shadow-lg;
     transform: translateY(-3px);
 
     &::before { opacity: 1; }
   }
+}
+
+.company-details {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes cardIn {
@@ -53,17 +58,18 @@
 
 // ─── Card Header ──────────────────────────────────────────────────────────────
 
-.card-header {
+.card-top {
   display: flex;
-  gap: 12px;
-  margin-bottom: 12px;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
 }
 
-.c-logo {
-  width: 46px;
-  height: 46px;
-  border-radius: 11px;
+.company-logo {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -72,115 +78,201 @@
   font-weight: 800;
   font-size: 1rem;
   color: var(--white);
+  overflow: hidden;
 }
 
-.card-meta-top { flex: 1; min-width: 0; }
+.company-info {
+  flex: 1;
+  min-width: 0;
+}
 
-.c-name {
+.company-name {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--ink);
-  margin-bottom: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: 4px;
+  line-height: 1.3;
 }
 
-.c-cat { font-size: 0.75rem; color: var(--ink-muted); }
+.company-category {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin-bottom: 10px;
+}
 
-// ─── Card Badge ───────────────────────────────────────────────────────────────
+.company-desc {
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
 
-.c-badge {
+.card-badge {
   font-size: 0.62rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.4px;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 20px;
   white-space: nowrap;
   flex-shrink: 0;
-
-  &.badge-f { background: rgba(201, 168, 76, 0.15); color: #9a7a20; border: 1px solid rgba(201, 168, 76, 0.35); }
-  &.badge-n { background: var(--teal-pale); color: var(--teal); border: 1px solid rgba(26, 122, 110, 0.2); }
-  &.badge-v { background: #edf5ff; color: #2563eb; border: 1px solid #bfdbfe; }
 }
 
-// ─── Card Body ────────────────────────────────────────────────────────────────
-
-.c-desc {
-  font-size: 0.82rem;
-  color: var(--ink-soft);
-  line-height: 1.55;
-  margin-bottom: 12px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.badge-featured {
+  background: rgba(201, 168, 76, 0.15);
+  color: #9a7a20;
+  border: 1px solid rgba(201, 168, 76, 0.35);
 }
 
-.c-tags {
+.badge-new {
+  background: var(--teal-pale);
+  color: var(--teal);
+  border: 1px solid rgba(26, 122, 110, 0.2);
+}
+
+.badge-verified {
+  background: #edf5ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+// ─── Card Meta ───────────────────────────────────────────────────────────────
+
+.card-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 12px;
-}
-
-.c-tag {
-  font-size: 0.68rem;
-  font-weight: 500;
-  color: var(--ink-soft);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 3px 8px;
-  border-radius: 6px;
-}
-
-// ─── Card Footer ──────────────────────────────────────────────────────────────
-
-.c-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 11px;
-  border-top: 1px solid var(--border);
-  flex-wrap: wrap;
   gap: 8px;
-}
-
-.c-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid $border-dark;
   flex-wrap: wrap;
 }
 
-.c-info-item {
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  flex: 1 0 calc(50% - 8px);
+
+  svg {
+    width: 13px;
+    height: 13px;
+    color: var(--teal);
+  }
+}
+
+.rating {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 0.73rem;
-  color: var(--ink-muted);
-
-  svg { width: 11px; height: 11px; }
 }
 
-.c-rating { display: flex; align-items: center; gap: 3px; }
-.stars { color: var(--gold); font-size: 0.7rem; }
-.rating-val { font-size: 0.75rem; font-weight: 600; color: var(--ink-soft); }
+.stars {
+  color: var(--gold);
+  font-size: 0.75rem;
+}
+
+// ─── Card Footer / Actions ──────────────────────────────────────────────────
+
+.deal-actions {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.btn-view-details {
+  flex: 1;
+  justify-content: center;
+}
+
+.btn-share {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid $border-dark;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink-soft);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(13, 15, 20, 0.06);
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+    background: rgba($color-primary, 0.06);
+    transform: translateY(-1px);
+  }
+}
 
 .btn-view-profile {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--teal);
-  text-decoration: none;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
-  transition: gap 0.2s;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--teal), #2fa596);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, gap 0.2s ease;
+  box-shadow: 0 8px 20px rgba(26, 122, 110, 0.16);
+  white-space: nowrap;
+  min-width: 110px;
 
-  &:hover { gap: 7px; }
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(26, 122, 110, 0.22);
+    gap: 8px;
+  }
 
   svg { width: 11px; height: 11px; }
+}
+
+.btn-share {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid $border-dark;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink-soft);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(13, 15, 20, 0.06);
+
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+    background: rgba($color-primary, 0.06);
+    transform: translateY(-1px);
+  }
 }
 
 // ─── Logo Color Variants ──────────────────────────────────────────────────────

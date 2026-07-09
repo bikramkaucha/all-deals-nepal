@@ -61,7 +61,7 @@ function clean() {
 function styles() {
   return src(paths.scss.entry)
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded', includePaths: ['node_modules'] }).on('error', sass.logError))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(dest(paths.scss.dest))
     .pipe(cleanCSS())
@@ -75,7 +75,7 @@ function styles() {
 function criticalStyles() {
   return src(paths.scss.critical)
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded', includePaths: ['node_modules'] }).on('error', sass.logError))
     .pipe(dest('./'))
     .pipe(cleanCSS())
     .pipe(rename({ suffix: '.min' }))
@@ -85,9 +85,13 @@ function criticalStyles() {
 }
 // ─── JS ───────────────────────────────────────────────────────────────────────
 
+// gulpfile.js
+const esmify = require('esmify');
+
 function scripts() {
   return browserify({ entries: paths.js.entry, debug: true })
-    .transform(babelify, { presets: [['@babel/preset-env', { targets: '> 0.25%, not dead' }]], sourceMaps: true })
+    .transform(babelify, { presets: [['@babel/preset-env', { targets: '> 0.25%, not dead' }]] })
+    .plugin(esmify)          // ← add this line
     .bundle()
     .pipe(source('main.js'))
     .pipe(buffer())
