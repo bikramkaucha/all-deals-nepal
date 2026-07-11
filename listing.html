@@ -6,23 +6,6 @@
 <title>All Deals Nepal</title>
 <link rel="preload" href="./critical.min.css" as="style" onload="this.rel='stylesheet'">
 <link rel="stylesheet" href="main.min.css" >
-<style>
-  .results-actions { display:flex; align-items:center; gap:10px; }
-  .mobile-filter-toggle { display:none; align-items:center; gap:8px; border:1.5px solid #b3b0a6; border-radius:999px; padding:8px 12px; background:#fff; color:#1f2328; font-size:0.8rem; font-weight:700; cursor:pointer; box-shadow:0 8px 24px rgba(13,15,20,.08); }
-  .mobile-filter-toggle svg { width:15px; height:15px; }
-  .filter-badge { display:inline-flex; align-items:center; justify-content:center; min-width:22px; height:22px; padding:0 6px; border-radius:999px; background:#d95d3b; color:#fff; font-size:0.72rem; font-weight:700; }
-  .sidebar-header-actions { display:flex; align-items:center; gap:8px; }
-  .sidebar-close { display:none; width:30px; height:30px; border:none; background:#f5f3eb; border-radius:50%; color:#1f2328; cursor:pointer; font-size:0.95rem; line-height:1; }
-  .sidebar-overlay { display:none; position:fixed; inset:0; z-index:200; background:rgba(13,15,20,.4); backdrop-filter:blur(4px); }
-  .sidebar-overlay.open { display:block; }
-  .company-card.is-hidden { display:none !important; }
-  @media (max-width: 768px) {
-    .mobile-filter-toggle { display:inline-flex; }
-    .sidebar-close { display:inline-flex; align-items:center; justify-content:center; }
-    .sidebar { position:fixed; top:0; left:0; bottom:0; z-index:201; width:300px; max-height:100vh; transform:translateX(-100%); transition:transform .35s cubic-bezier(.4,0,.2,1); background:#fff; box-shadow:0 16px 48px rgba(13,15,20,.13); }
-    .sidebar.mobile-open { transform:translateX(0); }
-  }
-</style>
 </head>
 <body>
 
@@ -208,12 +191,14 @@
       <article class="company-card" data-category="tech" data-city="Kathmandu" data-district="Kathmandu" data-name="TechSphere Solutions" data-tags="software cloud erp" data-desc="Custom software development, cloud solutions, and digital transformation services for enterprises." data-badge="featured" data-rating="4.9" data-year="2014">
         <div class="company-details">
           <div class="card-top">
-            <div class="company-logo"><img src="./src/image/logo.png" alt="TechSphere Solutions logo" width="80" height="80"></div>
-            <div class="company-info">
-              <div class="company-name">TechSphere Solutions</div>
-              <div class="company-category">Technology &amp; IT</div>
+            <div class="card-top-company-info">
+              <div class="company-info">
+                <div class="company-name">TechSphere Solutions</div>
+                <div class="company-category">Technology &amp; IT</div>
+              </div>
+              <span class="card-badge badge-featured">⭐ Featured</span>
             </div>
-            <span class="card-badge badge-featured">⭐ Featured</span>
+            <div class="company-logo"><img src="./src/image/logo.png" alt="TechSphere Solutions logo" width="80" height="80"></div>
           </div>
           <p class="company-desc">Custom software development, cloud solutions, and digital transformation services for enterprises.</p>
           <div class="card-meta">
@@ -223,7 +208,7 @@
           </div>
         </div>
         <div class="deal-actions">
-          <a href="#" class="btn btn--primary btn-view-details">View Profile</a>
+          <a href="#" class="btn btn--outline btn-view-details">View Profile</a>
           <button type="button" class="btn-share" aria-label="Share TechSphere Solutions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
         </div>
       </article>
@@ -231,12 +216,15 @@
       <article class="company-card" data-category="finance" data-city="Lalitpur" data-district="Lalitpur" data-name="GoldFinance Group" data-tags="loans investment banking" data-desc="Comprehensive financial services including loans, investment consulting, and wealth management." data-badge="featured" data-rating="4.8" data-year="2008">
         <div class="company-details">
           <div class="card-top">
-            <div class="company-logo"><img src="./src/image/logo.png" alt="GoldFinance Group logo" width="80" height="80"></div>
-            <div class="company-info">
-              <div class="company-name">GoldFinance Group</div>
-              <div class="company-category">Finance &amp; Banking</div>
-            </div>
-            <span class="card-badge badge-featured">⭐ Featured</span>
+             <div class="card-top-company-info">
+               <div class="company-info">
+                 <div class="company-name">GoldFinance Group</div>
+                 <div class="company-category">Finance &amp; Banking</div>
+               </div>
+               <span class="card-badge badge-featured">⭐ Featured</span>
+
+             </div>
+            <div class="company-logo"><img src="./src/image/starbuck.png" alt="GoldFinance Group logo" width="80" height="80"></div>
           </div>
           <p class="company-desc">Comprehensive financial services including loans, investment consulting, and wealth management.</p>
           <div class="card-meta">
@@ -246,7 +234,7 @@
           </div>
         </div>
         <div class="deal-actions">
-          <a href="#" class="btn btn--primary btn-view-details">View Profile</a>
+          <a href="#" class="btn btn--outline btn-view-details">View Profile</a>
           <button type="button" class="btn-share" aria-label="Share GoldFinance Group"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
         </div>
       </article>
@@ -254,12 +242,15 @@
       <article class="company-card" data-category="health" data-city="Pokhara" data-district="Kaski" data-name="HealthCare Plus" data-tags="hospital diagnostics telemed" data-desc="Modern medical facilities with specialist doctors, diagnostics, and telemedicine services." data-badge="new" data-rating="4.6" data-year="2021">
         <div class="company-details">
           <div class="card-top">
-            <div class="company-logo"><img src="./src/image/logo.png" alt="HealthCare Plus logo" width="80" height="80"></div>
-            <div class="company-info">
-              <div class="company-name">HealthCare Plus</div>
-              <div class="company-category">Healthcare &amp; Medical</div>
-            </div>
-            <span class="card-badge badge-new">✦ New</span>
+             <div class="card-top-company-info">
+               <div class="company-info">
+                 <div class="company-name">HealthCare Plus</div>
+                 <div class="company-category">Healthcare &amp; Medical</div>
+               </div>
+               <span class="card-badge badge-new">✦ New</span>
+
+             </div>
+            <div class="company-logo"><img src="./src/image/sun.png" alt="HealthCare Plus logo" width="80" height="80"></div>
           </div>
           <p class="company-desc">Modern medical facilities with specialist doctors, diagnostics, and telemedicine services.</p>
           <div class="card-meta">
@@ -269,7 +260,7 @@
           </div>
         </div>
         <div class="deal-actions">
-          <a href="#" class="btn btn--primary btn-view-details">View Profile</a>
+          <a href="#" class="btn btn--outline btn-view-details">View Profile</a>
           <button type="button" class="btn-share" aria-label="Share HealthCare Plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
         </div>
       </article>
@@ -277,12 +268,15 @@
       <article class="company-card" data-category="edu" data-city="Kathmandu" data-district="Kathmandu" data-name="EduAcademy Nepal" data-tags="training certification skills" data-desc="Professional certification courses, skill development programs, and vocational training centers." data-badge="featured" data-rating="4.9" data-year="2011">
         <div class="company-details">
           <div class="card-top">
-            <div class="company-logo"><img src="./src/image/logo.png" alt="EduAcademy Nepal logo" width="80" height="80"></div>
-            <div class="company-info">
-              <div class="company-name">EduAcademy Nepal</div>
-              <div class="company-category">Education &amp; Training</div>
-            </div>
-            <span class="card-badge badge-featured">⭐ Featured</span>
+             <div class="card-top-company-info">
+               <div class="company-info">
+                 <div class="company-name">EduAcademy Nepal</div>
+                 <div class="company-category">Education &amp; Training</div>
+               </div>
+               <span class="card-badge badge-featured">⭐ Featured</span>
+
+             </div>
+            <div class="company-logo"><img src="./src/image/icon.png" alt="EduAcademy Nepal logo" width="80" height="80"></div>
           </div>
           <p class="company-desc">Professional certification courses, skill development programs, and vocational training centers.</p>
           <div class="card-meta">
@@ -292,7 +286,7 @@
           </div>
         </div>
         <div class="deal-actions">
-          <a href="#" class="btn btn--primary btn-view-details">View Profile</a>
+          <a href="#" class="btn btn--outline btn-view-details">View Profile</a>
           <button type="button" class="btn-share" aria-label="Share EduAcademy Nepal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
         </div>
       </article>
@@ -300,12 +294,15 @@
       <article class="company-card" data-category="const" data-city="Bhaktapur" data-district="Bhaktapur" data-name="BuildMasters Co." data-tags="construction interior real-estate" data-desc="Residential and commercial construction, interior design, and property development firm." data-badge="verified" data-rating="4.5" data-year="2019">
         <div class="company-details">
           <div class="card-top">
+             <div class="card-top-company-info">
+               <div class="company-info">
+                 <div class="company-name">BuildMasters Co.</div>
+                 <div class="company-category">Construction</div>
+               </div>
+               <span class="card-badge badge-verified">✔ Verified</span>
+
+             </div>
             <div class="company-logo"><img src="./src/image/logo.png" alt="BuildMasters Co. logo" width="80" height="80"></div>
-            <div class="company-info">
-              <div class="company-name">BuildMasters Co.</div>
-              <div class="company-category">Construction</div>
-            </div>
-            <span class="card-badge badge-verified">✔ Verified</span>
           </div>
           <p class="company-desc">Residential and commercial construction, interior design, and property development firm.</p>
           <div class="card-meta">
@@ -315,7 +312,7 @@
           </div>
         </div>
         <div class="deal-actions">
-          <a href="#" class="btn btn--primary btn-view-details">View Profile</a>
+          <a href="#" class="btn btn--outline btn-view-details">View Profile</a>
           <button type="button" class="btn-share" aria-label="Share BuildMasters Co."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
         </div>
       </article>
@@ -323,12 +320,15 @@
       <article class="company-card" data-category="travel" data-city="Pokhara" data-district="Kaski" data-name="TrekTours Nepal" data-tags="trekking adventure tours" data-desc="Award-winning trekking, adventure tours, and customised travel packages across the Himalayas." data-badge="featured" data-rating="5.0" data-year="2007">
         <div class="company-details">
           <div class="card-top">
+             <div class="card-top-company-info">
+               <div class="company-info">
+                 <div class="company-name">TrekTours Nepal</div>
+                 <div class="company-category">Travel &amp; Tourism</div>
+               </div>
+               <span class="card-badge badge-featured">⭐ Featured</span>
+
+             </div>
             <div class="company-logo"><img src="./src/image/logo.png" alt="TrekTours Nepal logo" width="80" height="80"></div>
-            <div class="company-info">
-              <div class="company-name">TrekTours Nepal</div>
-              <div class="company-category">Travel &amp; Tourism</div>
-            </div>
-            <span class="card-badge badge-featured">⭐ Featured</span>
           </div>
           <p class="company-desc">Award-winning trekking, adventure tours, and customised travel packages across the Himalayas.</p>
           <div class="card-meta">
@@ -338,7 +338,7 @@
           </div>
         </div>
         <div class="deal-actions">
-          <a href="#" class="btn btn--primary btn-view-details">View Profile</a>
+          <a href="#" class="btn btn--outline btn-view-details">View Profile</a>
           <button type="button" class="btn-share" aria-label="Share TrekTours Nepal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
         </div>
       </article>
@@ -346,12 +346,15 @@
       <article class="company-card" data-category="retail" data-city="Kathmandu" data-district="Kathmandu" data-name="MegaMart Retail" data-tags="supermarket electronics fashion" data-desc="Wide range of consumer goods, electronics, fashion and household products at affordable prices." data-badge="verified" data-rating="4.4" data-year="2015">
         <div class="company-details">
           <div class="card-top">
+             <div class="card-top-company-info">
+               <div class="company-info">
+                 <div class="company-name">MegaMart Retail</div>
+                 <div class="company-category">Retail &amp; Shopping</div>
+               </div>
+               <span class="card-badge badge-verified">✔ Verified</span>
+
+             </div>
             <div class="company-logo"><img src="./src/image/logo.png" alt="MegaMart Retail logo" width="80" height="80"></div>
-            <div class="company-info">
-              <div class="company-name">MegaMart Retail</div>
-              <div class="company-category">Retail &amp; Shopping</div>
-            </div>
-            <span class="card-badge badge-verified">✔ Verified</span>
           </div>
           <p class="company-desc">Wide range of consumer goods, electronics, fashion and household products at affordable prices.</p>
           <div class="card-meta">
@@ -361,7 +364,7 @@
           </div>
         </div>
         <div class="deal-actions">
-          <a href="#" class="btn btn--primary btn-view-details">View Profile</a>
+          <a href="#" class="btn btn--outline btn-view-details">View Profile</a>
           <button type="button" class="btn-share" aria-label="Share MegaMart Retail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
         </div>
       </article>
@@ -369,12 +372,15 @@
       <article class="company-card" data-category="auto" data-city="Lalitpur" data-district="Lalitpur" data-name="AutoZone Nepal" data-tags="cars spareparts service" data-desc="Authorised dealer for passenger vehicles, SUVs, spare parts, and service center operations." data-badge="verified" data-rating="4.3" data-year="2012">
         <div class="company-details">
           <div class="card-top">
+             <div class="card-top-company-info">
+               <div class="company-info">
+                 <div class="company-name">AutoZone Nepal</div>
+                 <div class="company-category">Automotive</div>
+               </div>
+               <span class="card-badge badge-verified">✔ Verified</span>
+
+             </div>
             <div class="company-logo"><img src="./src/image/logo.png" alt="AutoZone Nepal logo" width="80" height="80"></div>
-            <div class="company-info">
-              <div class="company-name">AutoZone Nepal</div>
-              <div class="company-category">Automotive</div>
-            </div>
-            <span class="card-badge badge-verified">✔ Verified</span>
           </div>
           <p class="company-desc">Authorised dealer for passenger vehicles, SUVs, spare parts, and service center operations.</p>
           <div class="card-meta">
@@ -384,7 +390,7 @@
           </div>
         </div>
         <div class="deal-actions">
-          <a href="#" class="btn btn--primary btn-view-details">View Profile</a>
+          <a href="#" class="btn btn--outline btn-view-details">View Profile</a>
           <button type="button" class="btn-share" aria-label="Share AutoZone Nepal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
         </div>
       </article>
@@ -401,6 +407,36 @@
 
   </main>
 </div>
+<section id="newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-text reveal">
+        <span class="section-label">Stay Updated</span>
+        <h2 class="section-title">Get Business News &amp; <em style="color:var(--gold-light)">Exclusive Deals</em></h2>
+        <p class="section-desc">Subscribe to our newsletter and be the first to know about new company listings, featured deals, and business updates across Nepal.</p>
+        <div class="newsletter-perks">
+          <span class="perk">Weekly digest</span>
+          <span class="perk">New listings alert</span>
+          <span class="perk">Exclusive offers</span>
+          <span class="perk">No spam, ever</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="newsletter-form">
+          <div class="nf-row">
+            <input class="nf-input" type="text" placeholder="Your Full Name">
+          </div>
+          <div class="nf-row">
+            <input class="nf-input" type="email" placeholder="Your Email Address">
+            <button class="btn btn--outline-white">Subscribe</button>
+          </div>
+          <p class="nf-note">📩 Join 25,000+ subscribers. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div class="footer-main">

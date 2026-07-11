@@ -51,12 +51,13 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 16px;
+  align-items: center;
 }
 
 .company-logo {
   width: rem(130);
-  height: auto;
-  border-radius: 12px;
+  height: rem(130);
+  border-radius: rem(12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,10 +66,11 @@
   font-size: 1.1rem;
   color: $white;
   flex-shrink: 0;
+  margin-bottom: rem(16);
   
   img{
     width:100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
     object-position: center;
   }
