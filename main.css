@@ -333,7 +333,6 @@ section {
   justify-content: space-between;
   align-items: flex-start;
   gap: 12px;
-  margin-bottom: 14px;
 }
 
 .company-logo {
@@ -571,12 +570,7 @@ section {
 }
 
 .page-wrap {
-  max-width: 87.5rem;
-  margin: 0 auto;
   padding: 4.75rem 1rem 3rem;
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
 }
 
 .sidebar {
@@ -988,6 +982,33 @@ section {
   display: block;
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #7c8090;
+  margin-bottom: 18px;
+}
+@media (min-width: 768px) {
+  .breadcrumb {
+    font-size: 1rem;
+  }
+}
+.breadcrumb a {
+  color: #E8185A;
+  text-decoration: none;
+  padding: 0;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.breadcrumb span {
+  padding: 0 8px;
+  color: #380516;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1007,6 +1028,21 @@ section {
 
 .mt-auto {
   margin-top: auto;
+}
+
+.featured-deals .btn-wrap {
+  margin-top: 2rem;
+  text-align: center;
+}
+.featured-deals .btn-wrap .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1.5rem;
+}
+@media (min-width: 1200px) {
+  .featured-deals .btn-wrap .btn {
+    padding: 0.5rem 3rem;
+  }
 }
 
 #featured {
@@ -1058,13 +1094,10 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 16px;
-  align-items: center;
 }
 
 .company-logo {
   width: 8.125rem;
-  height: 8.125rem;
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
@@ -1294,7 +1327,7 @@ section {
 .deal-bookmark svg {
   width: 18px;
   height: 18px;
-  color: #7c8090;
+  color: #E8185A;
   transition: color 0.3s ease;
 }
 .deal-bookmark:hover {
@@ -2151,23 +2184,19 @@ footer {
   min-width: 0;
 }
 
-.breadcrumb {
+.listing-page {
+  max-width: 87.5rem;
+  margin: 0 auto;
   display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.listing-page .company-grid .company-card .card-top {
   align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  color: #7c8090;
-  margin-bottom: 18px;
 }
-.breadcrumb a {
-  color: #E8185A;
-  text-decoration: none;
-}
-.breadcrumb a:hover {
-  text-decoration: underline;
-}
-.breadcrumb span {
-  color: #b3b0a6;
+.listing-page .company-grid .company-card .company-logo {
+  width: 8.125rem;
+  height: 8.125rem;
 }
 
 .search-bar-wrap {
@@ -2467,6 +2496,142 @@ footer {
     transform: translateX(0);
   }
 }
+.deal-detail-page {
+  background: #ffffff;
+}
+@media (min-width: 992px) {
+  .deal-detail-page {
+    padding-top: 6.25rem;
+  }
+}
+.deal-detail-page .breadcrumb-wrap {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .deal-detail-page .breadcrumb-wrap {
+    padding: 0 2rem;
+  }
+}
+.deal-detail-page .deal-detail {
+  padding-top: 0;
+}
+.deal-detail-page .deal-detail-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.deal-detail-page .deal-detail-wrap-media, .deal-detail-page .deal-detail-wrap-info {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .deal-detail-page .deal-detail-wrap-media, .deal-detail-page .deal-detail-wrap-info {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+.deal-detail-page .deal-detail-wrap-media .swiper-button-next, .deal-detail-page .deal-detail-wrap-media .swiper-button-prev {
+  border: none;
+  background: none;
+}
+.deal-detail-page .deal-detail-wrap-media .swiper-button-next:after, .deal-detail-page .deal-detail-wrap-media .swiper-button-prev:after {
+  color: #E8185A;
+  font-size: 1.75rem !important;
+}
+.deal-detail-page .deal-detail-wrap-media .img-wrap {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .deal-detail-page .deal-detail-wrap-media .img-wrap {
+    width: 38rem;
+    height: 38rem;
+  }
+}
+.deal-detail-page .deal-detail-wrap-media .img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.deal-detail-page .deal-detail-wrap-info {
+  padding: 1rem;
+}
+.deal-detail-page .deal-detail-wrap-info h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+  .deal-detail-page .deal-detail-wrap-info h1 {
+    font-size: 2rem;
+  }
+}
+.deal-detail-page .deal-detail-wrap-info .deal-detail-subrow {
+  position: relative;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-detail-subrow .deal-detail-company .deal-provider {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #E8185A;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-detail-subrow .deal-detail-company .deal-location {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-detail-subrow .deal-bookmark {
+  border: 1px solid #E8185A;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-reviews .deal-stars {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-reviews .deal-rating {
+  font-size: 1.5rem;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-reviews .deal-review-count {
+  font-size: 0.875rem;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-categories {
+  color: #E8185A;
+  font-size: 0.875rem;
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-categories-tag {
+  background: #FBEAF0;
+  border-radius: 2rem;
+  padding: 0.3125rem 0.625rem;
+  display: block;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-detail-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+.deal-detail-page .deal-detail-wrap-info .deal-detail-actions .btn-buy {
+  min-width: 11.25rem;
+  justify-content: center;
+}
+.deal-detail-page .similar-deals .section-title {
+  margin-bottom: 1.5rem;
+}
+.deal-detail-page .similar-deals .deal-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .deal-detail-page .similar-deals .deal-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .deal-detail-page .similar-deals .deal-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /**
  * Swiper 11.2.10
  * Most modern mobile touch slider and framework with hardware accelerated transitions

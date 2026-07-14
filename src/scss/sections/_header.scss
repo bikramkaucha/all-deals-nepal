@@ -62,12 +62,6 @@ header {
     }
 }
 
-.site-header--inner {
-    background: $white;
-    border-bottom: 1px solid $border;
-    backdrop-filter: blur(16px);
-}
-
 .header-inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -100,6 +94,19 @@ nav {
     }
 }
 
+.site-header--inner {
+    background: $white;
+    border-bottom: 1px solid $border;
+    backdrop-filter: blur(16px);
+    nav{
+        a{
+            color: $color-dark;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+}
 .nav-item {
     position: relative;
 }

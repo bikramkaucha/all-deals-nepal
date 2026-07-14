@@ -7,27 +7,22 @@
   min-width: 0;
 }
 
-// ─── Breadcrumb ───────────────────────────────────────────────────────────────
-
-.breadcrumb {
+.listing-page{
+  max-width: rem(1400);
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  color: $ink-muted;
-  margin-bottom: 18px;
-
-  a {
-    color: $color-primary;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
+  gap: 24px;
+  align-items: flex-start;
+  .company-grid{
+    .company-card{
+      .card-top{
+        align-items: center;
+      }
+      .company-logo{
+        width: rem(130);
+        height: rem(130);
+      }
     }
-  }
-
-  span {
-    color: $border-dark;
   }
 }
 

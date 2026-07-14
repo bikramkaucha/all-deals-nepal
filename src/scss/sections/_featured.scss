@@ -1,6 +1,21 @@
 @use 'abstracts/variables' as *; 
 @use 'abstracts/mixins' as *;
 
+.featured-deals{
+  .btn-wrap{
+    margin-top: rem(32);
+    text-align:center;
+
+    .btn{
+      width: fit-content;
+      padding: rem(8 24);
+
+      @include breakpoint-up(xl){
+        padding: rem(8 48);
+      }
+    }
+  }
+}
 #featured {
   background: $white;
 }
@@ -50,13 +65,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 16px;
-  align-items: center;
 }
 
 .company-logo {
   width: rem(130);
-  height: rem(130);
   border-radius: rem(12);
   display: flex;
   align-items: center;

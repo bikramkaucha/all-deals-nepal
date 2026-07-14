@@ -11,6 +11,7 @@
 @use 'components/load-more';
 @use 'components/company-card';
 @use 'components/sidebar';
+@use 'components/breadcrumb';
 
 // helpers
 @use 'utilities/helpers';
@@ -26,4 +27,5 @@
 
 // pages
 @use 'pages/listing';
+@use 'pages/detail-page';
 @use 'vendors/swiper';

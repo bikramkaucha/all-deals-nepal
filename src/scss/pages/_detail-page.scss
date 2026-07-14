@@ -1,0 +1,135 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+.deal-detail-page{
+    background: $white;
+    @include breakpoint-up(lg){
+        padding-top: rem(100);
+    }
+    .breadcrumb-wrap{
+        max-width: rem(1280);
+        margin: 0 auto;
+        @include breakpoint-up(lg){
+            padding: 0 rem(32);
+        }
+    }
+
+    .deal-detail{
+        padding-top: 0;
+        &-wrap{
+            display:flex;
+            align-items: flex-start;
+            gap: rem(24);
+
+            &-media,
+            &-info{
+                width: 100%;
+                @include breakpoint-up(lg){
+                    flex:1;
+                    max-width:50%
+                }
+            }
+            &-media{
+                .swiper-button-next, .swiper-button-prev{
+                    border: none;
+                    background: none;
+                    
+                    &:after{
+                        color:$color-primary;
+                        font-size: rem(28) !important;
+                    }
+                }
+                .img-wrap{
+                    width: 100%;
+                    
+                    @include breakpoint-up(xl){
+                        width: rem(608);
+                        height: rem(608);
+                    }
+                    img{
+                        width:100%;
+                        height:100%;
+                        object-fit: cover;
+                        object-position:center;
+                    }
+                }
+            }
+            &-info{
+                padding:rem(16);
+                h1{
+                    font-size:rem(24);
+                    margin-bottom:rem(12);
+                    @include breakpoint-up(md){
+                        font-size:rem(32);
+                    }
+                }
+                .deal-detail-subrow{
+                    position: relative;
+                    .deal-detail-company{
+                        .deal-provider{
+                            font-size: 1rem;
+                            margin-bottom: rem(16);
+                            color:$color-primary;
+                        }
+                        .deal-location{
+                            margin-bottom: rem(8);
+                            font-size: rem(14);
+                        }
+                    }
+                    .deal-bookmark{
+                        border: 1px solid $color-primary;
+                    }
+                }
+                .deal-reviews {
+                    .deal-stars{
+                        font-size:rem(32);
+                        line-height: 1.6;
+                    }
+                    .deal-rating{
+                        font-size: rem(24)
+                    }
+                    .deal-review-count{
+                       font-size: rem(14) 
+                    }
+                }
+                .deal-categories{
+                    color: $color-primary;
+                    font-size: rem(14);
+                    display: flex;
+                    gap: rem(12);
+                    margin: rem(16) 0;
+                    &-tag{
+                        background: $color-light;
+                        border-radius: rem(32);
+                        padding: rem(5 10);
+                        display:block;
+                    }
+                }
+                .deal-detail-actions{
+                    display:flex;
+                    gap: rem(12);
+                    .btn-buy{
+                        min-width: rem(180);
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+    .similar-deals{
+        .section-title{
+            margin-bottom: rem(24);
+        }
+        .deal-grid{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: rem(16);
+            @include breakpoint-up(md){
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @include breakpoint-up(xl){
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}

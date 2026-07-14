@@ -112,12 +112,6 @@ header .logo img {
   border-color: #E8185A !important;
 }
 
-.site-header--inner {
-  background: #ffffff;
-  border-bottom: 1px solid #e2e0d8;
-  backdrop-filter: blur(16px);
-}
-
 .header-inner {
   max-width: 1280px;
   margin: 0 auto;
@@ -144,6 +138,18 @@ nav a {
   position: relative;
 }
 nav a:hover {
+  color: #E8185A;
+}
+
+.site-header--inner {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e0d8;
+  backdrop-filter: blur(16px);
+}
+.site-header--inner nav a {
+  color: #380516;
+}
+.site-header--inner nav a:hover {
   color: #E8185A;
 }
 

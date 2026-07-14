@@ -1,0 +1,31 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap:wrap;
+  gap: 6px;
+  font-size: rem(12);
+  color: $ink-muted;
+  margin-bottom: 18px;
+  
+  @include breakpoint-up(md){
+    font-size:rem(16)
+  }
+
+  a {
+    color: $color-primary;
+    text-decoration: none;
+    padding: 0;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+span {
+    padding: 0 8px;
+    color: $color-dark;
+  }
+}
