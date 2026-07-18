@@ -59,3 +59,42 @@ export function initSearchTags() {
     });
   });
 }
+export function initUserMenu() {
+  const userMenuTrigger = document.getElementById('userMenuTrigger');
+  const userDropdown = document.getElementById('userDropdown');
+
+  if (userMenuTrigger && userDropdown) {
+    userMenuTrigger.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = userDropdown.classList.toggle('open');
+      userMenuTrigger.setAttribute('aria-expanded', isOpen);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!userDropdown.contains(event.target) && !userMenuTrigger.contains(event.target)) {
+        userDropdown.classList.remove('open');
+        userMenuTrigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        userDropdown.classList.remove('open');
+        userMenuTrigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Optional: hook up logout buttons (desktop + mobile) to your actual logout logic
+  const logoutBtn = document.getElementById('logoutBtn');
+  const mobileLogoutBtn = document.getElementById('mobileLogoutBtn');
+
+  [logoutBtn, mobileLogoutBtn].forEach(btn => {
+    if (!btn) return;
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      // TODO: replace with real logout call (e.g. redirect to /logout, clear session, etc.)
+      console.log('Logout clicked');
+    });
+  });
+}

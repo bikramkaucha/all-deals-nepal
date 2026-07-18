@@ -5,6 +5,8 @@
 @use 'abstracts/mixins';
 @use 'base/reset';
 @use 'base/typography';
+@use 'vendors/swiper';
+
 // components
 @use 'components/button';
 @use 'components/generic';
@@ -25,7 +27,10 @@
 @use 'sections/news-letter';
 @use 'sections/footer';
 
+// company page section
+@use 'sections/deals';
+
 // pages
 @use 'pages/listing';
 @use 'pages/detail-page';
-@use 'vendors/swiper';
+@use 'pages/company-detail';
